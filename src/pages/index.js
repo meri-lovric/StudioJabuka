@@ -1,20 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
+import Content from "../components/content"
+import Welcome from "../components/welcome"
+import Navigation from "../components/navigation"
+import 'bootstrap/dist/css/bootstrap.min.css';
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+  <Layout data-spy="scroll" data-target=".navbar" data-offset="50">
+    <Content id="section1" class="container-fluid"></Content>
+    <Welcome></Welcome>
+    <Navigation></Navigation>
   </Layout>
 )
 

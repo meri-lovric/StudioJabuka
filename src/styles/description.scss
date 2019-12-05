@@ -1,0 +1,52 @@
+// Just to make it a bit nice
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
+body {
+  font-family: "Source Code Pro", sans-serif;
+}
+.wrap {
+  padding: 10% 20%;
+}
+h2 {
+  margin-top: 3em;
+  color: #a8dd53;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+a:link.welcome {
+  display: flex;
+  justify-content: center;
+}
+
+a:link.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+// Now that is interesting
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-decoration: none;
+  // background-image: linear-gradient(to right, yellow 0, yellow 50%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 0.5s;
+
+  &--thin {
+    background-image: linear-gradient(to right, black 0, black 100%);
+    &:hover {
+      background-size: 100% 10%;
+    }
+  }
+  &--thick {
+    background-position: 0 1em;
+    background-image: linear-gradient(to right, #a8dd53 0, #a8dd53 100%);
+    &:hover {
+      background-size: 100% 40%;
+    }
+  }
+}
