@@ -1,8 +1,9 @@
 import React from "react";
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBInput } from "mdbreact";
-
+import Layout from "../components/layout"
 const ContactPage = () => {
   return (
+    <Layout>
     <section className="my-5">
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contact us
@@ -108,6 +109,7 @@ const ContactPage = () => {
         </MDBCol>
       </MDBRow>
     </section>
+    </Layout>
   );
 }
 
