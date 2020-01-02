@@ -41,8 +41,10 @@ export const Footer = () => {
   `)
   return (
     <footer
+    className="container-fluid"
       style={{
         padding: "20px 0",
+        width:"100vw",
         display: "flex",
         justifyContent: "center",
         flexDirection: "row",
@@ -86,27 +88,27 @@ export const Footer = () => {
         <Img
           fluid={query.allFile.edges[0].node.childImageSharp.fluid}
           alt="footer-1"
-          style={{ height: "200px", width: "200px", margin: "10px" }}
+          style={{ height: "10vw", width: "10vw", margin: "10px" }}
         />
         <Img
           fluid={query.allFile.edges[2].node.childImageSharp.fluid}
           alt="footer-2"
-          style={{ height: "200px", width: "200px", margin: "10px" }}
+          style={{ height: "10vw", width: "10vw", margin: "10px" }}
         />
         <Img
           fluid={query.allFile.edges[1].node.childImageSharp.fluid}
           alt="footer-3"
-          style={{ height: "200px", width: "200px", margin: "10px" }}
+          style={{ height: "10vw", width: "10vw", margin: "10px" }}
         />
         <Img
           fluid={query.allFile.edges[3].node.childImageSharp.fluid}
           alt="footer-4"
-          style={{ height: "200px", width: "200px", margin: "10px" }}
+          style={{ height: "10vw", width: "10vw", margin: "10px" }}
         />
         <Img
           fluid={query.allFile.edges[4].node.childImageSharp.fluid}
           alt="footer-5"
-          style={{ height: "200px", width: "200px", margin: "10px" }}
+          style={{ height: "10vw", width: "10vw", margin: "10px" }}
         />
       </div>
     </footer>

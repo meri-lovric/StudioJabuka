@@ -16,13 +16,16 @@
     "gatsby-source-filesystem": "^2.1.39",
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.6",
+    "mdbootstrap": "^4.11.0",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-typewriter-hook": "^1.0.1"
+    "react-typewriter-hook": "^1.0.1",
+    "react-wow": "^1.0.0",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

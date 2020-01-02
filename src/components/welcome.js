@@ -1,8 +1,9 @@
 import React from "react"
 import "../styles/description.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
+import Sample from "../images/SampleImages/15110997_1379393578791937_2498445392797748409_o.jpg"
 import { useStaticQuery, graphql } from "gatsby"
-
+import ReactWOW from "react-wow"
 const Welcome = () => {
   /*const data = useStaticQuery(graphql`
     {
@@ -16,36 +17,65 @@ const Welcome = () => {
     }
   `)*/
   return (
-    <p
-      id="section2"
-      class="container-fluid"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        height: "100vh",
-        wordWrap: "break-word",
-        fontFamily: "'Source Code Pro' sans-serif",
-        padding: "10% 20%",
-        textAlign: "center",
-      }}
-    >
-      <h2>Dobrodošli</h2>
-      <p>
-        <a className=" welcome underlined underlined--thin">
-        **Studio Jabuka** je fotografski studio iz Splita.
-    Naša ekipa nudi vam sve fotografske usluge, od _fotografiranja vjenčanja_ i raznih drugih
-    prigoda, _snimanja foto-sessiona_ na lokaciji i u studiju i _izrade
-    book-ova_ za modele, _obrade i retuširanja fotografija_ i pripreme za
-    tisak, izrade foto albuma svih vrsta, _izrade najkvalitetnijih tiskanih
-    book-albuma_...
-    Nudimo vam i usluge snimanja i produkcije videa najviše
-    kvalitete, snimanja vjenčanja i raznih drugih prigoda. Posjedujemo
-    najmoderniju opremu i sve radimo u **HD kvaliteti**.
-        </a>
-      </p>
-    </p>
+    <ReactWOW animation="fadeInUp">
+      <section id="section2" class="py-5" style={{
+          display:"flex",
+          alignItems:"center",
+          height: "100vh"
+        }}>
+        <div
+          class="container"
+          
+        >
+          <h2 class="h1-responsive font-weight-bold text-center mb-5  ">
+            Foto Studio
+          </h2>
+          <p class="lead grey-text text-center w-responsive mx-auto mb-5">
+            Studio Jabuka je fotografski studio iz Splita. Naša ekipa nudi vam
+            sve fotografske usluge, od fotografiranja vjenčanja i raznih drugih
+            prigoda, do obrade i retuširanja fotografija.
+          </p>
+          <div class="row">
+            <div class="col-lg-5 text-center text-lg-left">
+              <img class="img-fluid" src={Sample} alt="Sample image"></img>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="row mb-3">
+                <div class="col-xl-10 col-md-11 col-10">
+                  <h5 class="font-weight-bold mb-3">Foto</h5>
+                  <p class="grey-text">
+                    Snimanja foto-sessiona na lokaciji i u studiju, i _obrade i
+                    retuširanja fotografija_ i
+                  </p>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-xl-10 col-md-11 col-10">
+                  <h5 class="font-weight-bold mb-3">Video</h5>
+                  <p class="grey-text">
+                    Nudimo vam i usluge snimanja i produkcije videa najviše
+                    kvalitete, snimanja vjenčanja i raznih drugih prigoda.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xl-10 col-md-11 col-10">
+                  <h5 class="font-weight-bold mb-3">Book</h5>
+                  <p class="grey-text mb-0">
+                    _izrade book-ova_ za modele, pripreme za tisak, izrade foto
+                    albuma svih vrsta, _izrade najkvalitetnijih tiskanih
+                    book-albuma_...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </ReactWOW>
   )
 }
 export default Welcome

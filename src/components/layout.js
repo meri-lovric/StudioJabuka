@@ -3,22 +3,21 @@ import Header from "./header"
 import Footer from "./footer"
 const Layout = ({ children }) => {
   return (
-    <div
-   
-      /*style={{
-        width: "101%",
-        height: "101%",
-        marginTop: "-8px",
-        marginLeft: "-8px",
-        fontFamily: "Source Code Pro",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}*/
-    >
+    <div id="layout">
+      
       <Header></Header>
       {children}
-      <Footer></Footer>
+      <Footer style={{ position: "relative", bottom: "0" }}></Footer>
+      <style jsx>{`
+        #layout {
+          width: 100vw;
+          display: grid;
+          grid-template-columns: 1fr;
+          
+        }
+        ::-webkit-scrollbar {display:none;}
+
+      `}</style>
     </div>
   )
 }
