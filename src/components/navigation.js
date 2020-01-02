@@ -37,6 +37,7 @@ const Navigation = () => {
           </a>
 
           <a className=" menu-item underlined  btn btn-purple   underlined--thick "> Q&A</a>
+          <a className=" menu-item underlined  btn btn-purple   underlined--thick " href="\contact"> Kontakt</a>
         </div>{" "}
         <style jsx>
           {`
@@ -46,6 +47,9 @@ const Navigation = () => {
              
               text-align: center;
               box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+              background: white;
+              opacity: 75%;
+              backdrop-filter: blur(5px) contrast(0.8);
 
             }
             * {
@@ -57,6 +61,8 @@ const Navigation = () => {
               background-color: whitesmoke;
               align-items: center;
               display: flex;
+              opacity: 75%;
+              backdrop-filter: blur(5px) contrast(0.8);
             }
             #section4 .container {
               border: 1px solid #e9e9e9;
@@ -65,6 +71,7 @@ const Navigation = () => {
               justify-content: center;
               background-color:white;
               box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+              
             }
           `}
         </style>
