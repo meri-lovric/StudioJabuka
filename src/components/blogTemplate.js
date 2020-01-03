@@ -2,16 +2,37 @@ import React from "react";
 import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
 import Helmet from "react-helmet";
 import Header from "../components/header"
+
+export const  query = graphql`query HomePageQuery{
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+      totalCount
+      edges {
+        node {
+          fields{
+            slug
+          }
+          frontmatter {
+            title
+            date
+            author
+          }
+          excerpt
+          timeToRead
+        }
+      }
+    }
+  }`
 const TemplateWrapper = ({ children }) => (
     <div>
       <Helmet
-        title="The Gray Web Blog"
+        title="Studio Jabuka"
         meta={[
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-      <Header></Header>
+      <Header>
+</Header>
       <div
         style={{
           margin: '0 auto',

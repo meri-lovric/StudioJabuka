@@ -4,7 +4,16 @@ import Instagram from "../images/Instagram.png"
 import Vimeo from "../images/Vimeo.png"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
+import {
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBMask,
+  MDBIcon,
+  MDBView,
+  MDBBtn,
+} from "mdbreact"
 export const Footer = () => {
   const query = useStaticQuery(graphql`
     {
@@ -41,10 +50,10 @@ export const Footer = () => {
   `)
   return (
     <footer
-    className="container-fluid"
+      className="container-fluid"
       style={{
         padding: "20px 0",
-        width:"100vw",
+        width: "100vw",
         display: "flex",
         justifyContent: "center",
         flexDirection: "row",
@@ -85,31 +94,66 @@ export const Footer = () => {
           padding: "20px",
         }}
       >
-        <Img
-          fluid={query.allFile.edges[0].node.childImageSharp.fluid}
-          alt="footer-1"
-          style={{ height: "10vw", width: "10vw", margin: "10px" }}
-        />
-        <Img
-          fluid={query.allFile.edges[2].node.childImageSharp.fluid}
-          alt="footer-2"
-          style={{ height: "10vw", width: "10vw", margin: "10px" }}
-        />
-        <Img
-          fluid={query.allFile.edges[1].node.childImageSharp.fluid}
-          alt="footer-3"
-          style={{ height: "10vw", width: "10vw", margin: "10px" }}
-        />
-        <Img
-          fluid={query.allFile.edges[3].node.childImageSharp.fluid}
-          alt="footer-4"
-          style={{ height: "10vw", width: "10vw", margin: "10px" }}
-        />
-        <Img
-          fluid={query.allFile.edges[4].node.childImageSharp.fluid}
-          alt="footer-5"
-          style={{ height: "10vw", width: "10vw", margin: "10px" }}
-        />
+        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+          <Img
+            fluid={query.allFile.edges[0].node.childImageSharp.fluid}
+            alt="footer-1"
+            style={{ height: "10vw", width: "10vw", margin: "10px" }}
+          />
+          <a href="#!">
+            <MDBMask overlay="white-slight" />
+          </a>
+        </MDBView>
+        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+          <Img
+            fluid={query.allFile.edges[1].node.childImageSharp.fluid}
+            alt="footer-1"
+            style={{ height: "10vw", width: "10vw", margin: "10px" }}
+          />
+          <a href="#!">
+            <MDBMask overlay="white-slight" />
+          </a>
+        </MDBView>
+        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+          <Img
+            fluid={query.allFile.edges[2].node.childImageSharp.fluid}
+            alt="footer-1"
+            style={{ height: "10vw", width: "10vw", margin: "10px" }}
+          />
+          <a href="#!">
+            <MDBMask overlay="white-slight" />
+          </a>
+        </MDBView>
+        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+          <Img
+            fluid={query.allFile.edges[3].node.childImageSharp.fluid}
+            alt="footer-1"
+            style={{ height: "10vw", width: "10vw", margin: "10px" }}
+          />
+          <a href="#!">
+            <MDBMask overlay="white-slight" />
+          </a>
+        </MDBView>
+        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+          <Img
+            fluid={query.allFile.edges[4].node.childImageSharp.fluid}
+            alt="footer-1"
+            style={{ height: "10vw", width: "10vw", margin: "10px" }}
+          />
+          <a href="#!">
+            <MDBMask overlay="white-slight" />
+          </a>
+        </MDBView>
+        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+          <Img
+            fluid={query.allFile.edges[5].node.childImageSharp.fluid}
+            alt="footer-1"
+            style={{ height: "10vw", width: "10vw", margin: "10px" }}
+          />
+          <a href="#!">
+            <MDBMask overlay="white-slight" />
+          </a>
+        </MDBView>
       </div>
     </footer>
   )
