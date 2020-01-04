@@ -10,12 +10,31 @@ import NavBar from "../components/navbar.js"
 import Bebas from "../fonts/BebasNeue-Regular.ttf"
 const Header = ({ siteTitle }) => (
   <header>
-   <NavBar></NavBar>
-    
+    <NavBar></NavBar>
+
     <link
       href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     ></link>
+
+    <style jsx>{`
+      #nav-icon1 > span:nth-child(3) {
+        top: 30px !important;
+        left: 12px !important;
+      }
+      #nav-icon1 > span:nth-child(1) {
+        top: 14px !important;
+        left: 12px !important;
+      }
+      #nav-icon1 > span:nth-child(2) {
+        top: 22px !important;
+        left: 12px !important;
+      }
+      #nav-icon1 {
+        padding: 1.5rem !important;
+        background-color: #00c851;
+      }
+    `}</style>
   </header>
 )
 

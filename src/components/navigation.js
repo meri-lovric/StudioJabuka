@@ -16,7 +16,7 @@ const Navigation = () => {
           
         >
           <a
-            className=" menu-item   btn btn-purple underlined  underlined--thick  "
+            className=" menu-item   btn btn-green underlined  underlined--thick  "
             href="\portfolio"
           >
             {" "}
@@ -24,20 +24,20 @@ const Navigation = () => {
           </a>
 
           <a
-            className=" menu-item  btn btn-purple  underlined  underlined--thick "
+            className=" menu-item  btn btn-success  underlined  underlined--thick "
             href="\categories"
           >
             {" "}
             Ponuda
           </a>
 
-          <a className=" menu-item  btn btn-purple underlined  underlined--thick" href="\blog">
+          <a className=" menu-item  btn btn-success underlined  underlined--thick" href="\blog">
             {" "}
             Blog
           </a>
 
-          <a className=" menu-item underlined  btn btn-purple   underlined--thick "> Q&A</a>
-          <a className=" menu-item underlined  btn btn-purple   underlined--thick " href="\contact"> Kontakt</a>
+          <a className=" menu-item underlined  btn btn-success   underlined--thick "> Q&A</a>
+          <a className=" menu-item underlined  btn btn-success   underlined--thick " href="\contact"> Kontakt</a>
         </div>{" "}
         <style jsx>
           {`
@@ -72,6 +72,9 @@ const Navigation = () => {
               background-color:white;
               box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
               
+            }
+            btn-green {
+              background-color: #00c851 !important;
             }
           `}
         </style>
