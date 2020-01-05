@@ -16,7 +16,7 @@ const Navigation = () => {
           
         >
           <a
-            className=" menu-item   btn btn-green underlined  underlined--thick  "
+            className=" menu-item   btn btn-success underlined  underlined--thick  "
             href="\portfolio"
           >
             {" "}
@@ -36,7 +36,10 @@ const Navigation = () => {
             Blog
           </a>
 
-          <a className=" menu-item underlined  btn btn-success   underlined--thick "> Q&A</a>
+          <a className=" menu-item underlined  btn btn-success   underlined--thick" href="\faq" >
+          {" "}
+            Q&A
+          </a>
           <a className=" menu-item underlined  btn btn-success   underlined--thick " href="\contact"> Kontakt</a>
         </div>{" "}
         <style jsx>
