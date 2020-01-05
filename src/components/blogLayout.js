@@ -12,7 +12,10 @@ import {
   MDBView,
   MDBBtn,
 } from "mdbreact"
+<<<<<<< Updated upstream
 import { Link } from "gatsby"
+=======
+>>>>>>> Stashed changes
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -38,6 +41,10 @@ const BlogPage = () => {
     }
   `)
   return (
+<<<<<<< Updated upstream
+=======
+    <div>
+>>>>>>> Stashed changes
     <MDBCard className=" px-5 pb-5">
       <MDBCardBody>
         <Search></Search>
