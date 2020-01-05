@@ -4,7 +4,6 @@ import {
   MDBNavbarBrand,
   MDBNavbarNav,
   MDBNavItem,
-  MDBNavLink,
   MDBCollapse,
   MDBContainer,
   MDBHamburgerToggler,
@@ -17,7 +16,6 @@ import {
   MDBDropdownItem,
   MDBIcon,
 } from "mdbreact"
-import { BrowserRouter as Router } from "react-router-dom"
 import Logo from "../images/Logo.png"
 import { Link } from "gatsby"
 
@@ -42,7 +40,7 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <Router>
+      <React.Fragment>
         <MDBContainer>
           <MDBNavbar
             id="header-nav"
@@ -87,22 +85,22 @@ class NavbarPage extends Component {
               <MDBCollapse isOpen={this.state.collapse1} navbar>
                 <MDBNavbarNav left>
                   <MDBNavItem active>
-                    <MDBNavLink to="#!">Home</MDBNavLink>
+                    <Link to="/">Home</Link>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#!">Portfolio</MDBNavLink>
+                    <Link to="/portfolio">Portfolio</Link>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#!">Blog</MDBNavLink>
+                    <Link to="/blog">Blog</Link>
                   </MDBNavItem>{" "}
                   <MDBNavItem>
-                    <MDBNavLink to="#!">Ponuda</MDBNavLink>
+                    <Link to="/categories">Ponuda</Link>
                   </MDBNavItem>{" "}
                   <MDBNavItem>
-                    <MDBNavLink to="#!">Q&A</MDBNavLink>
+                    <Link to="/">Q&A</Link>
                   </MDBNavItem>{" "}
                   <MDBNavItem>
-                    <MDBNavLink to="#!">Kontakt</MDBNavLink>
+                    <Link to="/contact">Kontakt</Link>
                   </MDBNavItem>
                 </MDBNavbarNav>
               </MDBCollapse>
@@ -110,7 +108,8 @@ class NavbarPage extends Component {
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                <MDBIcon far icon="user-circle" />                </MDBDropdownToggle>
+                  <MDBIcon far icon="user-circle" />{" "}
+                </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
                   <MDBDropdownItem href="#!">Action</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
@@ -160,9 +159,16 @@ class NavbarPage extends Component {
           }
           li {
             list-style-type: none;
+            margin-top:10px;
+            border-bottom: 1px solid #9e9e9e
+          }
+          #header-nav > div > div.collapse.show.navbar-collapse > ul > li > a {
+            color: #00c851 !important;
+            font-size: 1.25rem;
+            font-weight: 300;
           }
         `}</style>
-      </Router>
+      </React.Fragment>
     )
   }
 }

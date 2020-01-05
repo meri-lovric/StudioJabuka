@@ -3,6 +3,8 @@ title: "Common Vue.js"
 date: "2017-12-05"
 author: "Alex Chî"
 tag: "Dron"
+image: ../../images/Blogs/Sample1.jpg
+
 ---
     **Studio Jabuka** je fotografski studio iz Splita.
     Naša ekipa nudi vam sve fotografske usluge, od _fotografiranja vjenčanja_ i raznih drugih

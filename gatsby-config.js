@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -53,18 +53,34 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-      
-        resolve: `gatsby-remark-images`,
-        options: {
-          // It's important to specify the maxWidth (in pixels) of
-          // the content container as this plugin uses this as the
-          // base for generating different widths of each image.
-          maxWidth: 590,
-        },
     },
     {
       resolve: `gatsby-remark-relative-images`,
     },
+    {
+      resolve:`gatsby-plugin-mdx`,
+      options:{
+        extensions:[`.mdx`,`.md`],
+        gatsbyRemarkPlugins:[
+          {
+            resolve:"gatsby-remark-images",
+            options:{
+              maxWidth:600,
+              linkImagesToOriginal:false,
+            },
+          },
+        ],
+        plugins:[
+          {
+            resolve:"gatsby-remark-images",
+            options:{
+              maxWidth:600,
+              linkImagesToOriginal:false,
+            },
+          },
+        ],
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

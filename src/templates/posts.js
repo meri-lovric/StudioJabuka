@@ -17,7 +17,7 @@ export default ({ data }) => {
           </h2>
           <p className="text-center w-responsive mx-auto mb-5">
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                  </p>
+          </p>
         </div>
       <Author> {post.frontmatter.author}</Author>
       <style jsx>{`

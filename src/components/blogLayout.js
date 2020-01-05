@@ -83,9 +83,8 @@ const BlogPage = () => {
                     {node.frontmatter.tag}
                   </h6>
                 </a>
-                <Link to={node.fields.slug} style={{textDecoration: 'none', color: 'inherit'}}><h3 className="title"><strong>{node.frontmatter.title}</strong></h3></Link><h3 className=" title font-weight-bold mb-3 p-0">
-                  
-                </h3>
+                <Link to={node.fields.slug} style={{textDecoration: 'none'}}><h3 className="title font-weight-bold mb-3 p-0 green-text"> <strong>{node.frontmatter.title}</strong></h3></Link>           
+                
                 <p className="excerpt">{node.excerpt}</p>
 
                 <p>
