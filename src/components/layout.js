@@ -12,9 +12,7 @@ const Layout = ({ children }) => {
         #layout {
           width: 100vw;
           display: grid;
-          grid-template-columns: 1fr;
-          
-        }
+          grid-template-columns: 1fr;        }
         ::-webkit-scrollbar {display:none;}
 
       `}</style>

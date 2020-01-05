@@ -1,15 +1,35 @@
-import React from "react";
+import React from "react"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import Author from "../components/author"
+import Layout from "../components/layout"
 export default ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.markdownRemark
   return (
-    <div>
-      <h1>{post.frontmatter.title}</h1>
-      <h4 style={{color: 'rgb(165, 164, 164)'}}>{post.frontmatter.author} <span style={{fontSize: '0.8em'}}> -{post.frontmatter.date}</span></h4>
-      <div dangerouslySetInnerHTML = {{ __html: post.html }}/>
-    </div>
-  );
-};
-export const query = graphql`query PostQuery($slug: String!) {
+    <Layout style={{gridGap:"20vh"}}>
+      {" "}
+      <div
+        className="blog-text"
+       
+      >
+         <h2 className="h1-responsive font-weight-bold text-center my-5">
+         {post.frontmatter.title}
+          </h2>
+          <p className="text-center w-responsive mx-auto mb-5">
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                  </p>
+        </div>
+      <Author> {post.frontmatter.author}</Author>
+      <style jsx>{`
+      #layout{
+        grid-gap:20vh;
+      }
+      `}</style>
+    </Layout>
+  )
+}
+export const query = graphql`
+  query PostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -18,4 +38,5 @@ export const query = graphql`query PostQuery($slug: String!) {
         date
       }
     }
-  }`;
+  }
+`

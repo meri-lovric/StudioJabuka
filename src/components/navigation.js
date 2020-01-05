@@ -48,8 +48,7 @@ const Navigation = () => {
               text-align: center;
               box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
               background: white;
-              opacity: 75%;
-              backdrop-filter: blur(5px) contrast(0.8);
+              
 
             }
             * {

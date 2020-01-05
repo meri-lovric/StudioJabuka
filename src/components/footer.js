@@ -58,7 +58,7 @@ export const Footer = () => {
         justifyContent: "center",
         flexDirection: "row",
         alignItems: "center",
-        zIndex: 20,
+        zIndex: 10,
         marginBottom: `0px`,
         backgroundColor: "#201f1d",
         color: "white",

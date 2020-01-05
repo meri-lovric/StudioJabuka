@@ -60,6 +60,7 @@ export const Content = ({ data }) => {
                   width: "auto",
                   backdropFilter: "blur(5px) contrast(.8)",
                   height: "100%",
+                  zIndex: "15"
                 }}
               >
                 <a

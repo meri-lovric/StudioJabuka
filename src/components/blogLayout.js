@@ -12,12 +12,7 @@ import {
   MDBView,
   MDBBtn,
 } from "mdbreact"
-<<<<<<< Updated upstream
-import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
-=======
-
->>>>>>> Stashed changes
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -43,20 +38,6 @@ const BlogPage = () => {
     }
   `)
   return (
-<<<<<<< Updated upstream
-    <div>
-      <MDBCard className=" px-5 pb-5">
-        <MDBCardBody>
-          <h2 className="h1-responsive font-weight-bold text-center my-5">
-            Recent posts
-          </h2>
-          <p className="text-center w-responsive mx-auto mb-5">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-=======
     <MDBCard className=" px-5 pb-5">
       <MDBCardBody>
         <Search></Search>
@@ -66,7 +47,6 @@ const BlogPage = () => {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
->>>>>>> Stashed changes
 
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <MDBRow
@@ -130,7 +110,6 @@ const BlogPage = () => {
           <hr className="my-5" />
         </MDBCardBody>
       </MDBCard>
-    </div>
   )
 }
 
