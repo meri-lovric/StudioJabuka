@@ -38,6 +38,7 @@ const BlogPage = () => {
     }
   `)
   return (
+    <div>
     <MDBCard className=" px-5 pb-5">
       <MDBCardBody>
         <Search></Search>
@@ -109,6 +110,7 @@ const BlogPage = () => {
           <hr className="my-5" />
         </MDBCardBody>
       </MDBCard>
+      </div>
   )
 }
 

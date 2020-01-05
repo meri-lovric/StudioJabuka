@@ -7,6 +7,28 @@ import "mdbootstrap/css/mdb.min.css"
 import { useStaticQuery, graphql } from "gatsby"
 import ReactWOW from "react-wow"
 const Projects = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        totalCount
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              date
+              author
+              tag
+            }
+            excerpt
+            timeToRead
+          }
+        }
+      }
+    }
+  `)
   return (
     <section
       id="section3"
@@ -22,29 +44,25 @@ const Projects = () => {
         </p>
 
         <div class="row text-center">
-          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
-            <div class="view overlay rounded z-depth-1">
-              <img
-                src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg"
-                class="img-fluid"
-                alt="Sample project image"
-              ></img>
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4" key={node.id}>
+              <div class="view overlay rounded z-depth-1">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg"
+                  class="img-fluid"
+                  alt="Sample project image"
+                ></img>
+                <a href={node.fields.slug}>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <div class="card-body pb-0">
+                <h4 class="font-weight-bold my-3">Title of the news</h4>
+                <p class="grey-text">{node.excerpt}</p>
+                <a class="btn btn-purple btn-sm">View project</a>
+              </div>
             </div>
-            <div class="card-body pb-0">
-              <h4 class="font-weight-bold my-3">Title of the news</h4>
-              <p class="grey-text">
-                Temporibus autem quibusdam et aut officiis debitis aut rerum
-                necessitatibus saepe eveniet ut et voluptates repudiandae.
-              </p>
-              <a class="btn btn-purple btn-sm">
-                 View project
-              </a>
-            </div>
-          </div>
-
+          ))}
           <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
             <div class="view overlay rounded z-depth-1">
               <img
@@ -62,9 +80,7 @@ const Projects = () => {
                 Temporibus autem quibusdam et aut officiis debitis aut rerum
                 necessitatibus saepe eveniet ut et voluptates repudiandae.
               </p>
-              <a class="btn btn-purple btn-sm">
-                 View project
-              </a>
+              <a class="btn btn-purple btn-sm">View project</a>
             </div>
           </div>
 
@@ -85,9 +101,7 @@ const Projects = () => {
                 Temporibus autem quibusdam et aut officiis debitis aut rerum
                 necessitatibus saepe eveniet ut et voluptates repudiandae.
               </p>
-              <a class="btn btn-purple btn-sm">
-                 View project
-              </a>
+              <a class="btn btn-purple btn-sm">View project</a>
             </div>
           </div>
         </div>
