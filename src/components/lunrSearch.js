@@ -11,12 +11,11 @@ export default class Search extends Component {
   render() {
     return (
       <div>
-        <input type="text" value={this.state.query} onChange={this.search} />
+        <input type="text" style = {{color: "white"}} placeholder = "Pretraži" value={this.state.query} onChange={this.search} />
         <ul>
           {this.state.results.map(page => (
             <li key={page.id}>
               <Link to={"/" + page.path}>{page.title}</Link>
-              
             </li>
           ))}
         </ul>

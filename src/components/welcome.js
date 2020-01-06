@@ -27,7 +27,7 @@ const Welcome = () => {
           class="container"
           
         >
-          <h2 class="h1-responsive font-weight-bold text-center mb-5  ">
+          <h2 class="h1-responsive font-weight-bold text-center mb-5" style = {{color: "#00c851"}}>
             Foto Studio
           </h2>
           <p class="lead grey-text text-center w-responsive mx-auto mb-5">
@@ -45,8 +45,8 @@ const Welcome = () => {
                 <div class="col-xl-10 col-md-11 col-10">
                   <h5 class="font-weight-bold mb-3">Foto</h5>
                   <p class="grey-text">
-                    Snimanja foto-sessiona na lokaciji i u studiju, i _obrade i
-                    retuširanja fotografija_ i
+                    Snimanja foto-sessiona na lokaciji i u studiju, obrade i
+                    retuširanja fotografija
                   </p>
                 </div>
               </div>
@@ -55,7 +55,7 @@ const Welcome = () => {
                 <div class="col-xl-10 col-md-11 col-10">
                   <h5 class="font-weight-bold mb-3">Video</h5>
                   <p class="grey-text">
-                    Nudimo vam i usluge snimanja i produkcije videa najviše
+                    Usluge snimanja i produkcije videa najviše
                     kvalitete, snimanja vjenčanja i raznih drugih prigoda.
                   </p>
                 </div>
@@ -65,9 +65,9 @@ const Welcome = () => {
                 <div class="col-xl-10 col-md-11 col-10">
                   <h5 class="font-weight-bold mb-3">Book</h5>
                   <p class="grey-text mb-0">
-                    _izrade book-ova_ za modele, pripreme za tisak, izrade foto
-                    albuma svih vrsta, _izrade najkvalitetnijih tiskanih
-                    book-albuma_...
+                    Izrade book-ova za modele, pripreme za tisak, izrade foto
+                    albuma svih vrsta, izrade najkvalitetnijih tiskanih
+                    book-albuma...
                   </p>
                 </div>
               </div>

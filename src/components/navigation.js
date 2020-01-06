@@ -16,31 +16,43 @@ const Navigation = () => {
           
         >
           <a
-            className=" menu-item h1-responsive font-weight-bold  btn btn-success underlined  underlined--thick  "
+            className=" menu-item h1-responsive btn underlined  underlined--thick  "
             href="\portfolio"
+            style = {{backgroundColor: "#00c851", borderRadius: "15px", color:"white"}}
           >
             {" "}
             Portfolio
           </a>
 
           <a
-            className=" menu-item  btn btn-success  underlined  underlined--thick "
+            className=" menu-item  btn underlined  underlined--thick "
             href="\categories"
+            style = {{backgroundColor: "#00c851"}}
           >
             {" "}
             Ponuda
           </a>
 
-          <a className=" menu-item  btn btn-success underlined  underlined--thick" href="\blog">
+          <a className=" menu-item  btn underlined  underlined--thick" 
+            href="\blog"
+            style = {{backgroundColor: "#00c851"}}
+            >
             {" "}
             Blog
           </a>
 
-          <a className=" menu-item underlined  btn btn-success   underlined--thick" href="\faq" >
+          <a className=" menu-item underlined  btn    underlined--thick" 
+            href="\faq"
+            style = {{backgroundColor: "#00c851"}}
+            >
           {" "}
             Q&A
           </a>
-          <a className=" menu-item underlined  btn btn-success   underlined--thick " href="\contact"> Kontakt</a>
+          <a className=" menu-item underlined  btn btn-success   underlined--thick " 
+            href="\contact"
+            style = {{backgroundColor: "#00c851"}}
+          > 
+          Kontakt</a>
         </div>{" "}
         <style jsx>
           {`
@@ -51,6 +63,9 @@ const Navigation = () => {
               text-align: center;
               box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
               background: white;
+              background-color: #00c851;
+              border-radius: 15px;
+              color: white;
               
 
             }
@@ -63,7 +78,6 @@ const Navigation = () => {
               background-color: whitesmoke;
               align-items: center;
               display: flex;
-              opacity: 75%;
               backdrop-filter: blur(5px) contrast(0.8);
             }
             #section4 .container {
@@ -75,9 +89,7 @@ const Navigation = () => {
               box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
               
             }
-            btn-green {
-              background-color: #00c851 !important;
-            }
+           
           `}
         </style>
       </nav>
