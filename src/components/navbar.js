@@ -18,7 +18,6 @@ import {
 } from "mdbreact"
 import Logo from "../images/Logo.png"
 import { Link } from "gatsby"
-import { FaUserCircle } from "react-icons/fa";
 
 
 class NavbarPage extends Component {
@@ -110,7 +109,7 @@ class NavbarPage extends Component {
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                <FaUserCircle style = {{color: "#00c851", backgroundColor:"white", borderRadius: "3em", fontSize: "3em"}}/>
+                <MDBIcon icon="user-circle" style = {{color: "#00c851", backgroundColor:"white", borderRadius: "3em", fontSize: "3em"}}/>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
                   <MDBDropdownItem href="#!">Action</MDBDropdownItem>
