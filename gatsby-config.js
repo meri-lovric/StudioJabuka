@@ -1,14 +1,33 @@
 module.exports = {
-  
   siteMetadata: {
     title: `Studio Jabuka`,
     description: `Foto Video Studio`,
-    author: `@gatsbyjs`,
+    author: `@meri-lovric & @dsoljan`,
+    blogPosts: [
+      {
+        text: "In the beginning",
+        path: "/blog-post/in-the-beginning",
+      },
+      {
+        text: "U blizini",
+        path: "/map",
+      },
+      {
+        text: "Blog",
+        path: "/blog",
+      },
+      {
+        text: "O aplikaciji",
+        path: "/about",
+      },
+      {
+        text: "Prijavi se",
+        path: "/login",
+      },
+    ],
   },
   plugins: [
-    
-    
-    'gatsby-transformer-remark',
+    "gatsby-transformer-remark",
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -29,7 +48,7 @@ module.exports = {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         // Fields to index
-        fields: [`title`, `tags`, `html`],
+        fields: [`title`, `tags`, `html`, `path`],
         resolvers: {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
@@ -58,29 +77,31 @@ module.exports = {
       resolve: `gatsby-remark-relative-images`,
     },
     {
-      resolve:`gatsby-plugin-mdx`,
-      options:{
-        extensions:[`.mdx`,`.md`],
-        gatsbyRemarkPlugins:[
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           {
-            resolve:"gatsby-remark-images",
-            options:{
-              maxWidth:600,
-              linkImagesToOriginal:false,
-            },
-          },
-        ],
-        plugins:[
-          {
-            resolve:"gatsby-remark-images",
-            options:{
-              maxWidth:600,
-              linkImagesToOriginal:false,
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 600,
             },
           },
         ],
       },
-    }
+    },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        // It's important to specify the maxWidth (in pixels) of
+        // the content container as this plugin uses this as the
+        // base for generating different widths of each image.
+        maxWidth: 600,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

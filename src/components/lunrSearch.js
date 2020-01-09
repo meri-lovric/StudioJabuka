@@ -3,11 +3,13 @@ import { Index } from "elasticlunr"
 import { Link } from "gatsby"
 
 export default class Search extends Component {
-  state = {
-    query: ``,
-    results: []
- }
-
+  constructor(props) {
+    super(props)
+    this.state = {
+      query: ``,
+      results: [],
+    }
+  }
   render() {
     return (
       <div>
@@ -16,7 +18,6 @@ export default class Search extends Component {
           {this.state.results.map(page => (
             <li key={page.id}>
               <Link to={"/" + page.path}>{page.title}</Link>
-              
             </li>
           ))}
         </ul>
@@ -28,7 +29,7 @@ export default class Search extends Component {
     return this.index
       ? this.index
       : // Create an elastic lunr index and hydrate with graphql query results
-      Index.load(this.props.searchIndex)
+        Index.load(this.props.searchIndex)
   }
 
   search = evt => {

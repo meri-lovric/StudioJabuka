@@ -6,6 +6,7 @@ import "mdbootstrap/css/mdb.min.css"
 
 import { useStaticQuery, graphql } from "gatsby"
 import ReactWOW from "react-wow"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     {
@@ -21,6 +22,7 @@ const Projects = () => {
               date
               author
               tag
+              image
             }
             excerpt
             timeToRead
@@ -33,7 +35,7 @@ const Projects = () => {
     <section
       id="section3"
       class="text-center py-5"
-      style={{ backgroundColor: " #eee", height: "100vh" }}
+      style={{ backgroundColor: " #eee"}}
     >
       <div class="container">
         <h2 class="h1-responsive font-weight-bold mb-5">Our newest projects</h2>
@@ -57,53 +59,12 @@ const Projects = () => {
                 </a>
               </div>
               <div class="card-body pb-0">
-                <h4 class="font-weight-bold my-3">Title of the news</h4>
+                <h4 class="font-weight-bold my-3"></h4>
                 <p class="grey-text">{node.excerpt}</p>
                 <a class="btn btn-purple btn-sm">View project</a>
               </div>
             </div>
           ))}
-          <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-            <div class="view overlay rounded z-depth-1">
-              <img
-                src="https://mdbootstrap.com/img/Photos/Others/project4.jpg"
-                class="img-fluid"
-                alt="Sample project image"
-              ></img>
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <div class="card-body pb-0">
-              <h4 class="font-weight-bold my-3">Title of the news</h4>
-              <p class="grey-text">
-                Temporibus autem quibusdam et aut officiis debitis aut rerum
-                necessitatibus saepe eveniet ut et voluptates repudiandae.
-              </p>
-              <a class="btn btn-purple btn-sm">View project</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="view overlay rounded z-depth-1">
-              <img
-                src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg"
-                class="img-fluid"
-                alt="Sample project image"
-              ></img>
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <div class="card-body pb-0">
-              <h4 class="font-weight-bold my-3">Title of the news</h4>
-              <p class="grey-text">
-                Temporibus autem quibusdam et aut officiis debitis aut rerum
-                necessitatibus saepe eveniet ut et voluptates repudiandae.
-              </p>
-              <a class="btn btn-purple btn-sm">View project</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
