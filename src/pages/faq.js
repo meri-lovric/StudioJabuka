@@ -14,18 +14,9 @@ import ReactWOW from "react-wow"
 
 const QuestionsPage = () => (
   <Layout>
-    <React.Fragment>
-      <nav
-        class="navbar navbar-dark "
-        style={{ backgroundColor: "#00c851", margin: "15vw 10vw 5vw 10vw" }}
-      >
-        <ReactWOW animation="fadeIn">
-          <div className="h1" style={{ color: "white" }}>
-            Q&A
-          </div>
-        </ReactWOW>
-      </nav>
-    </React.Fragment>
+    
+    <h2 class="h1-responsive font-weight-bold text-center my-5" style={{color : "#00c851", paddingTop: "3em"}}>Q&A</h2>
+    
     <p className="text-center w-responsive mx-auto mb-5">
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
       dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non

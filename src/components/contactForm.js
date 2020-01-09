@@ -3,6 +3,7 @@ import { navigateTo } from "gatsby-link"
 import Recaptcha from "react-google-recaptcha"
 import { MDBInput, MDBIcon } from "mdbreact"
 
+
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
 
 function encode(data) {
