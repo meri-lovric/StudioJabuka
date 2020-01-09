@@ -38,7 +38,7 @@ const Projects = () => {
       style={{ backgroundColor: " #eee"}}
     >
       <div class="container">
-        <h2 class="h1-responsive font-weight-bold mb-5">Our newest projects</h2>
+        <h2 class="h1-responsive font-weight-bold mb-5" style = {{color: "#00c851"}}>Novosti</h2>
         <p class="grey-text w-responsive mx-auto mb-5">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non

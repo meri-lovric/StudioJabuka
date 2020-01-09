@@ -9,7 +9,7 @@ const Search = () => {
     <React.Fragment>
       <nav
         class="navbar navbar-dark "
-        style={{ backgroundColor: "#a8dd53"}}
+        style={{ backgroundColor: "#00c851"}}
       >
         <ReactWOW animation="fadeIn">
           <div className="h1" style={{ color: "white" }}>

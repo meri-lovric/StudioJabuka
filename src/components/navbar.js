@@ -19,6 +19,7 @@ import {
 import Logo from "../images/Logo.png"
 import { Link } from "gatsby"
 
+
 class NavbarPage extends Component {
   state = {
     collapse1: false,
@@ -108,7 +109,7 @@ class NavbarPage extends Component {
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                  <MDBIcon far icon="user-circle" />{" "}
+                <MDBIcon icon="user-circle" style = {{color: "#00c851", backgroundColor:"white", borderRadius: "3em", fontSize: "3em"}}/>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
                   <MDBDropdownItem href="#!">Action</MDBDropdownItem>
@@ -157,16 +158,25 @@ class NavbarPage extends Component {
             opacity: 75%;
             backdrop-filter: blur(5px) contrast(0.8);
           }
-          li {
-            list-style-type: none;
+          #menu li {
             margin-top:10px;
             border-bottom: 1px solid #9e9e9e
+          }
+          li {
+            list-style-type: none;
+          }
+          #header-nav > li > div > a {
+            color: #00c851;
           }
           #header-nav > div > div.collapse.show.navbar-collapse > ul > li > a {
             color: #00c851 !important;
             font-size: 1.25rem;
             font-weight: 300;
           }
+          #header-nav > li > div > a {
+            padding-bottom: 1em;
+          }
+          
         `}</style>
       </React.Fragment>
     )
