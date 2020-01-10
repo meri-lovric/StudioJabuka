@@ -2,8 +2,8 @@ import React from "react"
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn } from "mdbreact"
 import Layout from "../components/layout"
 import Contact from "../components/contactForm"
-import LeafletMap from "../components/leafletMap"
-import "../../node_modules/leaflet/dist/leaflet"
+/*import LeafletMap from "../components/leafletMap"
+import "../../node_modules/leaflet/dist/leaflet"*/
 
 const ContactPage = () => {
   return (
@@ -40,14 +40,16 @@ const ContactPage = () => {
               id="map-container"
               className="rounded z-depth-1-half map-container"
             >
-              {typeof window !== "undefined" && (
+            
+            {/*  {typeof window !== "undefined" && (
                 <LeafletMap
-                  position={[43.508133, 16.440193]}
-                  zoom={13}
+                  position={[52, -0.5]}
+                  zoom={8}
                   markerText={"Hello, this is a marker"}
-                  style = {{height: "400px", width: "200px"}}
                 />
-              )}
+              
+            )}*/}
+              
             </div>
             <br />
             <MDBRow className="text-center">
