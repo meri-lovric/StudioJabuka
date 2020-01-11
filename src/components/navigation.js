@@ -11,6 +11,7 @@ const Navigation = () => {
     <ReactWOW animation="fadeInLeft">
       <nav id="section4" class="navbar navbar-expand-lg  ">
         <div
+<<<<<<< Updated upstream
           className=" row text-center container animated slideInRight wow  responsive "
           data-wow-delay="0.6s"
         >
@@ -69,10 +70,62 @@ const Navigation = () => {
           </div>
         </div>
 
+=======
+          class="container-fluid animated slideInRight wow  "
+          data-wow-delay="0.6s"
+        >
+          <a
+            className=" menu-item h1-responsive btn underlined  underlined--thick  "
+            href="\portfolio"
+            style={{
+              backgroundColor: "#00c851",
+              borderRadius: "15px",
+              color: "white",
+            }}
+          >
+            {" "}
+            Portfolio
+          </a>
+
+          <a
+            className=" menu-item  btn underlined  underlined--thick "
+            href="\categories"
+            style={{ backgroundColor: "#00c851" }}
+          >
+            {" "}
+            Ponuda
+          </a>
+
+          <a
+            className=" menu-item  btn underlined  underlined--thick"
+            href="\blog"
+            style={{ backgroundColor: "#00c851" }}
+          >
+            {" "}
+            Blog
+          </a>
+
+          <a
+            className=" menu-item underlined  btn    underlined--thick"
+            href="\faq"
+            style={{ backgroundColor: "#00c851" }}
+          >
+            {" "}
+            Q&A
+          </a>
+          <a
+            className=" menu-item underlined  btn btn-success   underlined--thick "
+            href="\contact"
+            style={{ backgroundColor: "#00c851" }}
+          >
+            Kontakt
+          </a>
+        </div>{" "}
+>>>>>>> Stashed changes
         <style jsx>
           {`
             .menu-item {
-              font-size: 2em;
+              font-size: 1.8em;
               padding: 0.5em;
 
               text-align: center;
@@ -94,7 +147,7 @@ const Navigation = () => {
               display: flex;
               backdrop-filter: blur(5px) contrast(0.8);
             }
-            #section4 .container {
+            #section4 .container-fluid {
               border: 1px solid #e9e9e9;
               padding: 100px;
               display: flex;

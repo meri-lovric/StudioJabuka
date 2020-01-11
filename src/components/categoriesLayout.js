@@ -3,17 +3,18 @@ import "../styles/grid.scss"
 import Sample1 from "../images/Categories/26910197_1811510835580207_9147397433929883580_o.jpg"
 import Sample2 from "../images/Categories/josephpaul-7.jpg"
 import Sample3 from "../images/Categories/18238782_1559326514131975_3830999876402550223_o.jpg"
+import {Link} from "gatsby";
 
 const Categories = () => {
   return (
-    <section class="wrap">
-      <div class="tile">
-        <img src= {Sample3} />
+    <section class="grid-wrap text-center">
+      <Link to = "/weddings" class="tile text-center">
+        <img src= {Sample3} alt=""/>
         <div class="text">
           <h1>Vjenčanja</h1>
-          <h2 class="animate-text">Vjenčanja</h2>
+          <h2 class="animate-text">Foto & video</h2>
           <p class="animate-text">
-          U želji da maksimalno udovoljimo i najzahtjevnijim mladencima formirali smo nekoliko atraktivnih snimateljskih aranžmana kojima ćemo oživiti vašu svadbenu svečanost {" "}
+          U želji da maksimalno udovoljimo i najzahtjevnijim mladencima formirali smo nekoliko atraktivnih snimateljskih aranžmana kojima ćemo oživiti vašu svadbenu svečanost. {" "}
           </p>
           <div class="dots">
             <span></span>
@@ -21,15 +22,15 @@ const Categories = () => {
             <span></span>
           </div>
         </div>
-      </div>
+      </Link>
 
-      <div class="tile">
-        <img src= {Sample2}/>
+      <Link to = "/" class="tile text-center">
+        <img src= {Sample2} alt=""/>
         <div class="text">
-          <h1>Catering</h1>
-          <h2 class="animate-text">Snimanje ponude</h2>
+          <h1>Web, katalozi i promocija</h1>
+          <h2 class="animate-text">Foto & video</h2>
           <p class="animate-text">
-          Po definiciji, catering je­ služba koja se brine za opskrbu hranom i pićem putnika zrakoplovnih kompanija, uzvanika i gostiju različitih društvenih događaja i zabava. {" "}
+          Izrađujemo sve vrste profesionalnih stilskih i kataloških fotografija vaših proizvoda. {" "}
           </p>
           <div class="dots">
             <span></span>
@@ -37,15 +38,15 @@ const Categories = () => {
             <span></span>
           </div>
         </div>
-      </div>
+      </Link>
 
-      <div class="tile">
-        <img src= {Sample1}/>
+      <Link to = "/" class="tile text-center">
+        <img src= {Sample1} alt=""/>
         <div class="text">
-          <h1>Nekretnine</h1>
-          <h2 class="animate-text">Snimanje za oglase</h2>
+          <h1>Dron</h1>
+          <h2 class="animate-text">Foto & video</h2>
           <p class="animate-text">
-          Nekretnina u stvarnom pravu označava česticu zemljine površine, uključujući i sve što je s njom razmjerno trajno povezano na njezinoj površini ili ispod nje (prije svega zgrada, kuća, i sl.).{" "}
+          Ako želite prezentirati hotel, kuću, vilu, kamp ili restoran uz more, fotografije i video snimke iz zraka daju potpuno novu i atraktivnu perspektivu vašim objektima i lokacijama. {" "}
           </p>
           <div class="dots">
             <span></span>
@@ -53,28 +54,23 @@ const Categories = () => {
             <span></span>
           </div>
         </div>
-      </div>
+      </Link>
 
       <style jsx>{`
         body
         {
           background-color:#eee
         }
-        .wrap
+        .grid-wrap
         {
-          margin:50px auto 0 auto;
-          width:100%;
-          display:flex;
-          align-self:center;
-          align-items:space-around;
-          //max-width:1200px;
+          margin: 9em 10em;
         }
         .tile
         {
-          width:380px;
-          height:380px;
+          width:23.75em;
+          height:23.73em;
           margin:10px;
-          background-color:#f7e74c;
+          background-color:white;
           display:inline-block;
           background-size:cover;
           position:relative;
@@ -102,6 +98,7 @@ const Categories = () => {
           position:absolute;
           padding:30px;
           height:calc(100% - 60px);
+          font-size: 1.2em;
         }
         .tile h1
         {
@@ -109,11 +106,13 @@ const Categories = () => {
           font-weight:300;
           margin:0;
           text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+          color:rgb(32, 31, 29);
         }
         .tile h2
         {
           font-weight:100;
           margin:20px 0 0 0;
+          color: #00c851;
           font-style:italic;
            transform: translateX(200px);
         }
@@ -125,6 +124,7 @@ const Categories = () => {
         /*   opacity:0; */
           transform: translateX(-200px);
           transition-delay: 0.2s;
+          color: rgb(32, 31, 29);
         }
         .animate-text
         {
@@ -154,7 +154,7 @@ const Categories = () => {
           margin: 0 auto;
           width:30px;
           height:30px;
-          color:currentColor;
+          color: rgb(32, 31, 29);
           display:flex;
           flex-direction:column;
           align-items:center;
@@ -195,12 +195,7 @@ const Categories = () => {
         }
         
         
-        @media (max-width: 1000px) {
-          .wrap {
-           flex-direction: column;
-            width:400px;
-          }
-        }
+        
       `}</style>
     </section>
   )

@@ -37,6 +37,7 @@
     "react-icons": "^3.8.0",
     "react-lazyload": "^2.6.5",
     "react-leaflet": "^2.6.1",
+    "react-pricing-table": "^0.3.0",
     "react-typewriter-hook": "^1.0.1",
     "react-wow": "^1.0.0",
     "remark-ninja-react": "^2.3.8",
