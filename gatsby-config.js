@@ -11,6 +11,7 @@ module.exports = {
       {
         text: "U blizini",
         path: "/map",
+        
       },
       {
         text: "Blog",

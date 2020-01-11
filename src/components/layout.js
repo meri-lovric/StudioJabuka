@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <div id="layout">
       
-      <Header></Header>
+      <Header style={{position:"fixed"}}></Header>
       {children}
       <Footer style={{ position: "relative", bottom: "0" }}></Footer>
       <style jsx>{`

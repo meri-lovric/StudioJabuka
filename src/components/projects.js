@@ -7,6 +7,7 @@ import "mdbootstrap/css/mdb.min.css"
 import { useStaticQuery, graphql } from "gatsby"
 import ReactWOW from "react-wow"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Img from "gatsby-image"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     {
@@ -22,7 +23,11 @@ const Projects = () => {
               date
               author
               tag
-              image
+              image{childImageSharp {
+                fluid {
+                  tracedSVG
+                }
+              }}
             }
             excerpt
             timeToRead
@@ -49,11 +54,11 @@ const Projects = () => {
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div class="col-lg-4 col-md-12 mb-lg-0 mb-4" key={node.id}>
               <div class="view overlay rounded z-depth-1">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg"
+                <Img
+                  fluid={node.frontmatter.image[0].childImageSharp.fluid}
                   class="img-fluid"
                   alt="Sample project image"
-                ></img>
+                ></Img>
                 <a href={node.fields.slug}>
                   <div class="mask rgba-white-slight"></div>
                 </a>
@@ -61,7 +66,7 @@ const Projects = () => {
               <div class="card-body pb-0">
                 <h4 class="font-weight-bold my-3"></h4>
                 <p class="grey-text">{node.excerpt}</p>
-                <a class="btn btn-purple btn-sm">View project</a>
+                <a class="btn btn-purple btn-sm" href={node.fields.slug}>View project</a>
               </div>
             </div>
           ))}

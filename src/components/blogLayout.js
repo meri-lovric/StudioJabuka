@@ -13,6 +13,7 @@ import {
   MDBBtn,
 } from "mdbreact"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -28,6 +29,11 @@ const BlogPage = () => {
               date
               author
               tag
+              image{childImageSharp {
+                fluid {
+                  tracedSVG
+                }
+              }}
               
             }
             excerpt
@@ -65,12 +71,7 @@ const BlogPage = () => {
                     hover
                     waves
                   >
-                    <img
-                      className="img-fluid"
-                      src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"
-                      alt=""
-                    />
-
+                   
                     <a href="#!">
                       <MDBMask overlay="white-slight" />
                     </a>

@@ -36,8 +36,9 @@ const Welcome = () => {
             prigoda, do obrade i retuširanja fotografija.
           </p>
           <div class="row">
-            <div class="col-lg-5 text-center text-lg-left">
+            <div class="col-lg-5 text-center text-lg-left view overlay rounded z-depth-1">
               <img class="img-fluid" src={Sample} alt="Sample image"></img>
+              <div class="mask rgba-white-slight"></div>
             </div>
 
             <div class="col-lg-7">

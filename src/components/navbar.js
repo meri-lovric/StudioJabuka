@@ -19,7 +19,6 @@ import {
 import Logo from "../images/Logo.png"
 import { Link } from "gatsby"
 
-
 class NavbarPage extends Component {
   state = {
     collapse1: false,
@@ -51,6 +50,8 @@ class NavbarPage extends Component {
               boxShadow: "none",
               position: "fixed",
               zIndex: "10",
+              width: "95vw",
+              paddingLeft: "2vw",
             }}
             light
           >
@@ -77,68 +78,88 @@ class NavbarPage extends Component {
                   />{" "}
                 </Link>
               </MDBNavbarBrand>
-              <MDBHamburgerToggler
-                className="grow"
-                style={{}}
-                id="hamburger1"
-                onClick={() => this.toggleSingleCollapse("collapse1")}
-              />
-              <MDBCollapse isOpen={this.state.collapse1} navbar>
-                <MDBNavbarNav left>
-                  <MDBNavItem active>
-                    <Link to="/">Home</Link>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <Link to="/portfolio">Portfolio</Link>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <Link to="/blog">Blog</Link>
-                  </MDBNavItem>{" "}
-                  <MDBNavItem>
-                    <Link to="/categories">Ponuda</Link>
-                  </MDBNavItem>{" "}
-                  <MDBNavItem>
-                    <Link to="/">Q&A</Link>
-                  </MDBNavItem>{" "}
-                  <MDBNavItem>
-                    <Link to="/contact">Kontakt</Link>
-                  </MDBNavItem>
-                </MDBNavbarNav>
-              </MDBCollapse>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <MDBNavItem>
+                  <MDBDropdown>
+                    <MDBDropdownToggle nav caret className="btn">
+                      <MDBIcon
+                        icon="chevron-circle-down"
+                        style={{
+                          color: "#00c851",
+                          backgroundColor: "white",
+                          borderRadius: "3em",
+                          fontSize: "3em",
+                        }}
+                        
+                      />
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu className="dropdown-default">
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          width: "100vw",
+                          textAlign: "center",
+                        }}
+                      >
+                        <Link to="/">Home</Link>
+                        <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/blog">Blog</Link>
+                        <Link to="/categories">Ponuda</Link>
+                        <Link to="/">Q&A</Link>
+                        <Link to="/contact">Kontakt</Link>
+                      </div>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBDropdown>
+                    <MDBDropdownToggle nav caret>
+                      <MDBIcon
+                        icon="user-circle"
+                        style={{
+                          color: "#00c851",
+                          backgroundColor: "white",
+                          borderRadius: "3em",
+                          fontSize: "3em",
+                        }}
+                      />
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu className="dropdown-default">
+                      <MDBDropdownItem href="#!">Action</MDBDropdownItem>
+                      <MDBDropdownItem href="#!">
+                        Another Action
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="#!">
+                        Something else here
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="#!">
+                        Something else here
+                      </MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                </MDBNavItem>
+              </div>
             </MDBContainer>
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle nav caret>
-                <MDBIcon icon="user-circle" style = {{color: "#00c851", backgroundColor:"white", borderRadius: "3em", fontSize: "3em"}}/>
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">
-                    Something else here
-                  </MDBDropdownItem>
-                  <MDBDropdownItem href="#!">
-                    Something else here
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
           </MDBNavbar>
         </MDBContainer>
         <style jsx>{`
-          #nav-icon1 {
-            background-color: #a8dd53;
-            text-align: center;
-            padding: 1.5rem 3rem;
-            border-radius: 25px;
+          .dropdown-menu {
+            opacity: 75%;
+            backdropfilter: blur(5px) contrast(0.8);
           }
-          #nav-icon1 span {
-            width: 50%;
-            display: inline-block;
+          header .container {
+            max-width: 100vw;
+            display: flex;
+            justify-content: space-between;
           }
-          #layout > header > div > nav > div {
-            width: 100vw;
+          #header-nav > div {
+            max-width: 100vw;
+            display: flex;
+            justify-content: space-between;
           }
+          
+
           .navbar {
             box-shadow: none;
           }
@@ -147,34 +168,28 @@ class NavbarPage extends Component {
             transition-duration: 0.3s;
             transition-property: transform;
           }
-          .grow:hover {
-            transform: scale(1.1);
-          }
+        
           #header-nav .navbar-nav {
             position: inherit;
           }
-          #header-nav > div > div.collapse.show.navbar-collapse {
-            background: white;
-            opacity: 75%;
-            backdrop-filter: blur(5px) contrast(0.8);
-          }
+          
           #menu li {
-            margin-top:10px;
-            border-bottom: 1px solid #9e9e9e
+            margin-top: 10px;
+            border-bottom: 1px solid #9e9e9e;
           }
           li {
             list-style-type: none;
           }
+
+         
           #header-nav > li > div > a {
-            color: #00c851;
+            padding-bottom: 1em;
           }
-          #header-nav > div > div.collapse.show.navbar-collapse > ul > li > a {
+
+          #header-nav > div > div > li > div > div > div > div > a {
             color: #00c851 !important;
             font-size: 1.25rem;
             font-weight: 300;
-          }
-          #header-nav > li > div > a {
-            padding-bottom: 1em;
           }
           
         `}</style>
