@@ -11,7 +11,6 @@ const Navigation = () => {
     <ReactWOW animation="fadeInLeft">
       <nav id="section4" class="navbar navbar-expand-lg  ">
         <div
-<<<<<<< Updated upstream
           className=" row text-center container animated slideInRight wow  responsive "
           data-wow-delay="0.6s"
         >
@@ -70,58 +69,6 @@ const Navigation = () => {
           </div>
         </div>
 
-=======
-          class="container-fluid animated slideInRight wow  "
-          data-wow-delay="0.6s"
-        >
-          <a
-            className=" menu-item h1-responsive btn underlined  underlined--thick  "
-            href="\portfolio"
-            style={{
-              backgroundColor: "#00c851",
-              borderRadius: "15px",
-              color: "white",
-            }}
-          >
-            {" "}
-            Portfolio
-          </a>
-
-          <a
-            className=" menu-item  btn underlined  underlined--thick "
-            href="\categories"
-            style={{ backgroundColor: "#00c851" }}
-          >
-            {" "}
-            Ponuda
-          </a>
-
-          <a
-            className=" menu-item  btn underlined  underlined--thick"
-            href="\blog"
-            style={{ backgroundColor: "#00c851" }}
-          >
-            {" "}
-            Blog
-          </a>
-
-          <a
-            className=" menu-item underlined  btn    underlined--thick"
-            href="\faq"
-            style={{ backgroundColor: "#00c851" }}
-          >
-            {" "}
-            Q&A
-          </a>
-          <a
-            className=" menu-item underlined  btn btn-success   underlined--thick "
-            href="\contact"
-            style={{ backgroundColor: "#00c851" }}
-          >
-            Kontakt
-          </a>
-        </div>{" "}
->>>>>>> Stashed changes
         <style jsx>
           {`
             .menu-item {
