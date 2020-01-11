@@ -59,38 +59,45 @@ export default class Contact extends React.Component {
           <input name="bot-field" onChange={this.handleChange} />
         </label>
       </p>
-      <p class = "text-center">
+      <p className = "text-center">
         <label>
-          <MDBIcon icon="user-alt" style = {{marginRight: "8px"}} />
-          <input type="text" name="name" onChange={this.handleChange} placeholder="Enter your name" />
+          <MDBIcon icon="user-alt" style = {{marginRight: "10px"}} />
+          <input type="text" name="name"  onChange={this.handleChange} placeholder="Enter your name" className="form-control"/>
         </label>
       </p>
       <p class = "text-center">
         <label>
-          <MDBIcon icon="envelope" style = {{marginRight: "8px"}}/>
-          <input type="email" name="email" onChange={this.handleChange} placeholder="Enter email"/>
+          <MDBIcon icon="envelope" style = {{marginRight: "10px"}}/>
+          <input type="email" name="email"  onChange={this.handleChange} placeholder="Enter email" className="form-control"/>
         </label>
       </p>
       <p class = "text-center">
         <label>
-          <textarea name="message" onChange={this.handleChange}  style = {{marginLeft: "24px"}}/>
+          <MDBIcon icon="comment-alt" style = {{marginRight: "10px"}}/>
+          <textarea name="message" onChange={this.handleChange} placeholder="Enter message" className="form-control md-textarea"/>
         </label>
       </p>
       <p class = "text-center">
-        <button type="submit" class="btn">Send</button>
+        <button type="submit" className="btn btn-success">Send</button>
       </p>
     </form>
     <style jsx>{`
         .fa {
           font-size: 1.5em;
-        }
-        input, textarea {
-          width: 15em;
+          color: #212529;
         }
         .btn{
-          background-color: #00c851;
+          
           border-radius: 10px;
         }
+        label {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin: 2em 5em;
+        }
+        
       `}</style>
   </div>
 );
