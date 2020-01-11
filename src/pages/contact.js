@@ -2,8 +2,6 @@ import React from "react"
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn } from "mdbreact"
 import Layout from "../components/layout"
 import Contact from "../components/contactForm"
-import LeafletMap from "../components/leafletMap"
-import "../../node_modules/leaflet/dist/leaflet"
 
 const ContactPage = () => {
   return (
@@ -24,10 +22,10 @@ const ContactPage = () => {
           <MDBCol lg="5" className="lg-0 mb-4">
             <MDBCard>
               <MDBCardBody>
-                <div className="form-header">
-                  <h3 className="h2-responsive text-center my-5">
+                <div className="form-header text-center">
+                  <div className="h3 fadeIn" style={{color: "#00c851", animationName: "fadeIn", visibility: "visible", paddingTop: "1em"}}>
                     Write to us:
-                  </h3>
+                  </div>
                 </div>
                 <div>
                   <Contact></Contact>
@@ -40,34 +38,28 @@ const ContactPage = () => {
               id="map-container"
               className="rounded z-depth-1-half map-container"
             >
-              {typeof window !== "undefined" && (
-                <LeafletMap
-                  position={[43.508133, 16.440193]}
-                  zoom={13}
-                  markerText={"Hello, this is a marker"}
-                  style = {{height: "400px", width: "200px"}}
-                />
-              )}
+            
+              
             </div>
             <br />
             <MDBRow className="text-center">
-              <MDBCol md="4">
-                <MDBBtn tag="a" floating color="blue" className="accent-1">
-                  <MDBIcon icon="map-marker-alt" />
+              <MDBCol md="4" >
+                <MDBBtn color="success" tag="a">
+                  <MDBIcon icon="map-marker-alt" style = {{color: "white"}}/>
                 </MDBBtn>
                 <p>New York, 94126</p>
                 <p className="mb-md-0">United States</p>
               </MDBCol>
               <MDBCol md="4">
-                <MDBBtn tag="a" floating color="blue" className="accent-1">
-                  <MDBIcon icon="phone" />
+                <MDBBtn color="success" tag="a"  >
+                  <MDBIcon icon="phone" style = {{color: "white"}}/>
                 </MDBBtn>
                 <p>+ 01 234 567 89</p>
                 <p className="mb-md-0">Mon - Fri, 8:00-22:00</p>
               </MDBCol>
               <MDBCol md="4">
-                <MDBBtn tag="a" floating color="blue" className="accent-1">
-                  <MDBIcon icon="envelope" />
+                <MDBBtn color="success" tag="a" >
+                  <MDBIcon icon="envelope" style = {{color: "white"}} />
                 </MDBBtn>
                 <p>info@gmail.com</p>
                 <p className="mb-md-0">sale@gmail.com</p>
