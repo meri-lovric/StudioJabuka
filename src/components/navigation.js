@@ -72,7 +72,7 @@ const Navigation = () => {
         <style jsx>
           {`
             .menu-item {
-              font-size: 2em;
+              font-size: 1.8em;
               padding: 0.5em;
 
               text-align: center;
@@ -94,7 +94,7 @@ const Navigation = () => {
               display: flex;
               backdrop-filter: blur(5px) contrast(0.8);
             }
-            #section4 .container {
+            #section4 .container-fluid {
               border: 1px solid #e9e9e9;
               padding: 100px;
               display: flex;

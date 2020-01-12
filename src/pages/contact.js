@@ -23,7 +23,15 @@ const ContactPage = () => {
             <MDBCard>
               <MDBCardBody>
                 <div className="form-header text-center">
-                  <div className="h3 fadeIn" style={{color: "#00c851", animationName: "fadeIn", visibility: "visible", paddingTop: "1em"}}>
+                  <div
+                    className="h3 fadeIn"
+                    style={{
+                      color: "#00c851",
+                      animationName: "fadeIn",
+                      visibility: "visible",
+                      paddingTop: "1em",
+                    }}
+                  >
                     Write to us:
                   </div>
                 </div>
@@ -37,29 +45,26 @@ const ContactPage = () => {
             <div
               id="map-container"
               className="rounded z-depth-1-half map-container"
-            >
-            
-              
-            </div>
+            ></div>
             <br />
             <MDBRow className="text-center">
-              <MDBCol md="4" >
+              <MDBCol md="4">
                 <MDBBtn color="success" tag="a">
-                  <MDBIcon icon="map-marker-alt" style = {{color: "white"}}/>
+                  <MDBIcon icon="map-marker-alt" style={{ color: "white" }} />
                 </MDBBtn>
                 <p>New York, 94126</p>
                 <p className="mb-md-0">United States</p>
               </MDBCol>
               <MDBCol md="4">
-                <MDBBtn color="success" tag="a"  >
-                  <MDBIcon icon="phone" style = {{color: "white"}}/>
+                <MDBBtn color="success" tag="a">
+                  <MDBIcon icon="phone" style={{ color: "white" }} />
                 </MDBBtn>
                 <p>+ 01 234 567 89</p>
                 <p className="mb-md-0">Mon - Fri, 8:00-22:00</p>
               </MDBCol>
               <MDBCol md="4">
-                <MDBBtn color="success" tag="a" >
-                  <MDBIcon icon="envelope" style = {{color: "white"}} />
+                <MDBBtn color="success" tag="a">
+                  <MDBIcon icon="envelope" style={{ color: "white" }} />
                 </MDBBtn>
                 <p>info@gmail.com</p>
                 <p className="mb-md-0">sale@gmail.com</p>
