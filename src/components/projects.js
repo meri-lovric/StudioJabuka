@@ -23,11 +23,28 @@ const Projects = () => {
               date
               author
               tag
-              image{childImageSharp {
-                fluid {
-                  tracedSVG
+              image {
+                childImageSharp {
+                  fluid(
+                    quality: 100
+                    traceSVG: { threshold: 10 }
+                    webpQuality: 100
+                    maxWidth: 350
+                    maxHeight: 235
+                  ) {
+                    aspectRatio
+                    originalImg
+                    base64
+                    originalName
+                    src
+                    srcSet
+                    srcSetWebp
+                    srcWebp
+                    presentationHeight
+                    presentationWidth
+                  }
                 }
-              }}
+              }
             }
             excerpt
             timeToRead
@@ -54,11 +71,10 @@ const Projects = () => {
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div class="col-lg-4 col-md-12 mb-lg-0 mb-4" key={node.id}>
               <div class="view overlay rounded z-depth-1">
-                <Img
-                  fluid={node.frontmatter.image[0].childImageSharp.fluid}
-                  class="img-fluid"
-                  alt="Sample project image"
-                ></Img>
+              <Img
+                      className="img-fluid"
+                      fluid={node.frontmatter.image.childImageSharp.fluid}
+                    />
                 <a href={node.fields.slug}>
                   <div class="mask rgba-white-slight"></div>
                 </a>

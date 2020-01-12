@@ -29,11 +29,28 @@ const BlogPage = () => {
               date
               author
               tag
-              image{childImageSharp {
-                fluid {
-                  tracedSVG
+              image {
+                childImageSharp {
+                  fluid(
+                    quality: 100
+                    traceSVG: { threshold: 10 }
+                    webpQuality: 100
+                    maxWidth: 350
+                    maxHeight: 235
+                  ) {
+                    aspectRatio
+                    originalImg
+                    base64
+                    originalName
+                    src
+                    srcSet
+                    srcSetWebp
+                    srcWebp
+                    presentationHeight
+                    presentationWidth
+                  }
                 }
-              }}
+              }
               
             }
             excerpt
@@ -71,7 +88,11 @@ const BlogPage = () => {
                     hover
                     waves
                   >
-                   
+                    
+                    <Img
+                      className="img-fluid"
+                      fluid={node.frontmatter.image.childImageSharp.fluid}
+                    />
                     <a href="#!">
                       <MDBMask overlay="white-slight" />
                     </a>

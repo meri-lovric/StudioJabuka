@@ -11,7 +11,6 @@ module.exports = {
       {
         text: "U blizini",
         path: "/map",
-        
       },
       {
         text: "Blog",
@@ -28,7 +27,16 @@ module.exports = {
     ],
   },
   plugins: [
-    "gatsby-transformer-remark",
+    {
+      resolve:   `gatsby-transformer-remark`,
+      options:{
+        plugins:[
+          {
+            resolve:`gatsby-remark-images`,
+          }
+        ]
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -38,11 +46,19 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog-posts`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/blog-posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
     {
@@ -74,9 +90,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-remark-relative-images`,
-    },
+
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

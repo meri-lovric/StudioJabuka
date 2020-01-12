@@ -3,7 +3,7 @@ title: "The Beginning of The Web"
 date: "2018-01-10"
 author: "Chuloo Will"
 tag: "Catering"
-image: "./images/Sample1.jpg"
+image: './images/Sample1.jpg'
 path: '/in-the-beginning.md'
 
 ---
