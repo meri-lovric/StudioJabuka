@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import PricingWeddings from "../components/pricingWeddings"
 import PricingWeddingBooks from "../components/pricingWeddingBooks"
 import { Link } from "gatsby"
-import Weddings from "../images/SampleImages/Weddings.png"
+import Weddings from "../images/Prices/Weddings.png"
 
 const WeddingsPage = () => {
   return (
@@ -25,6 +25,13 @@ const WeddingsPage = () => {
           mijenjati.
         </p>
         <PricingWeddings></PricingWeddings>
+
+        <h2
+          className="h1-responsive font-weight-bold text-center my-5"
+          style={{ color: "white" }}
+        >
+          Wedding book
+        </h2>
         <p className="text-center font-weight-bold my-5">
           U booku je​​​​​ svaka fotografija odabrana i obrađena s pažnjom da
           najbolje opisuje događaje i emocije s Vašeg vjenčanja. Svaka kolekcija
@@ -35,12 +42,15 @@ const WeddingsPage = () => {
         </p>
         <PricingWeddingBooks></PricingWeddingBooks>
         <p className="text-center font-weight-bold my-4">
-          Ukoliko Vas zanima više informacija ili želite dogovoriti termin javite nam se:
+          U cjeniku su prikazane osnovne cijene, međutim one ovise o složenosti
+          i lokaciji fotografiranja.
+          <br /> Ukoliko Vas zanima više informacija ili želite
+          dogovoriti termin javite nam se:
         </p>
-        <div className = "text-center">
-        <Link to = "/contact" className="btn-success btn">
-        Kontakt
-        </Link>
+        <div className="text-center">
+          <Link to="/contact" className="btn-success btn">
+            Kontakt
+          </Link>
         </div>
       </section>
       <style jsx>{`
@@ -52,7 +62,8 @@ const WeddingsPage = () => {
           font-size: 1.2em;
         }
         .btn {
-          border-radius:10px;
+          border-radius: 10px;
+          font-size: 1.1em;
         }
       `}</style>
     </Layout>
