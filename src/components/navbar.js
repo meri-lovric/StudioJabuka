@@ -146,7 +146,7 @@ class NavbarPage extends Component {
         <style jsx>{`
           .dropdown-menu {
             opacity: 75%;
-            backdropfilter: blur(5px) contrast(0.8);
+            backdrop-filter: blur(5px) contrast(0.8);
           }
           header .container {
             max-width: 100vw;
