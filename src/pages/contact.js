@@ -3,6 +3,7 @@ import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn } from "mdbreact"
 import Layout from "../components/layout"
 import Contact from "../components/contactForm"
 
+
 const ContactPage = () => {
   return (
     <Layout>
@@ -14,9 +15,15 @@ const ContactPage = () => {
           Kontaktirajte nas
         </h2>
         <p className="text-center w-responsive mx-auto pb-5">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error
-          amet numquam iure provident voluptate esse quasi, veritatis totam
-          voluptas nostrum quisquam eum porro a pariatur veniam.
+          Kako bismo Vam poslali najbolju ponudu, navedite posebne želje, Vaš
+          okvirni budžet, očekivanja. Bit će nam drago prilagoditi se, jer
+          uvijek pridajemo pažnju detaljima i Vašim potrebama. Predlažemo
+          sastanak, jer naš favorit je ipak razgovor uz kavu ili telefonom.
+          Ispunite obrazac ili izravno pošaljite e-mail na
+          info@studiojabuka.com. Odgovorit ćemo na Vaš upit u roku 24 sata (pon
+          – pet). Obično smo vikendima zauzeti ili putujemo radi posla.
+          <br />
+          Hvala što ste zainteresirani za naše usluge!
         </p>
         <MDBRow style={{ margin: "0 10em" }}>
           <MDBCol lg="5" className="lg-0 mb-4">
@@ -52,29 +59,33 @@ const ContactPage = () => {
                 <MDBBtn color="success" tag="a">
                   <MDBIcon icon="map-marker-alt" style={{ color: "white" }} />
                 </MDBBtn>
-                <p>New York, 94126</p>
-                <p className="mb-md-0">United States</p>
+                <p>21251 Žrnovnica</p>
+                <p className="mb-md-0">Hrvatska</p>
               </MDBCol>
               <MDBCol md="4">
                 <MDBBtn color="success" tag="a">
                   <MDBIcon icon="phone" style={{ color: "white" }} />
                 </MDBBtn>
-                <p>+ 01 234 567 89</p>
-                <p className="mb-md-0">Mon - Fri, 8:00-22:00</p>
+                <p>+385 91 596 9080</p>
+                <p className="mb-md-0">Pon - Pet, 8:00-22:00</p>
               </MDBCol>
               <MDBCol md="4">
                 <MDBBtn color="success" tag="a">
+
                   <MDBIcon icon="envelope" style={{ color: "white" }} />
                 </MDBBtn>
-                <p>info@gmail.com</p>
-                <p className="mb-md-0">sale@gmail.com</p>
+                <p>info@studiojabuka.com</p>
               </MDBCol>
             </MDBRow>
           </MDBCol>
         </MDBRow>
       </section>
 
-      <style jsx>{``}</style>
+      <style jsx>{`
+        p {
+          font-size: 1.2em;
+        }
+      `}</style>
     </Layout>
   )
 }

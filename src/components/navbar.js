@@ -106,7 +106,7 @@ class NavbarPage extends Component {
                         <Link to="/portfolio">Portfolio</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/categories">Ponuda</Link>
-                        <Link to="/">Q&A</Link>
+                        <Link to="/faq">Pitanja i komentari</Link>
                         <Link to="/contact">Kontakt</Link>
                       </div>
                     </MDBDropdownMenu>

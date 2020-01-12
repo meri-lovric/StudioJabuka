@@ -97,6 +97,9 @@ export default class Contact extends React.Component {
           justify-content: center;
           margin: 2em 5em;
         }
+        .form-control {
+          box-shadow: rgba(0, 0, 0, 0.44) 0px 35px 77px -17px;
+        }
         
       `}</style>
   </div>

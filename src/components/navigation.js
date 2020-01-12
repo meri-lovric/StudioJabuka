@@ -55,7 +55,7 @@ const Navigation = () => {
               style={{ backgroundColor: "#00c851" }}
             >
               {" "}
-              Q&A
+              Pitanja i komentari
             </a>
           </div>
           <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
