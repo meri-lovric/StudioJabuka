@@ -81,7 +81,7 @@ class NavbarPage extends Component {
               <div style={{ display: "flex", alignItems: "center" }}>
                 <MDBNavItem>
                   <MDBDropdown>
-                    <MDBDropdownToggle nav caret className="btn">
+                    <MDBDropdownToggle nav caret>
                       <MDBIcon
                         icon="chevron-circle-down"
                         style={{
@@ -106,7 +106,7 @@ class NavbarPage extends Component {
                         <Link to="/portfolio">Portfolio</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/categories">Ponuda</Link>
-                        <Link to="/">Q&A</Link>
+                        <Link to="/faq">Pitanja i komentari</Link>
                         <Link to="/contact">Kontakt</Link>
                       </div>
                     </MDBDropdownMenu>
@@ -146,7 +146,7 @@ class NavbarPage extends Component {
         <style jsx>{`
           .dropdown-menu {
             opacity: 75%;
-            backdropfilter: blur(5px) contrast(0.8);
+            backdrop-filter: blur(5px) contrast(0.8);
           }
           header .container {
             max-width: 100vw;
@@ -190,6 +190,13 @@ class NavbarPage extends Component {
             color: #00c851 !important;
             font-size: 1.25rem;
             font-weight: 300;
+          }
+
+          #header-nav > div > div:nth-child(2) > li:nth-child(1) > div > a {
+            color: #00c851;
+          }
+          #header-nav > div > div:nth-child(2) > li:nth-child(2) > div > a {
+            color: #00c851 !important;
           }
           
         `}</style>
