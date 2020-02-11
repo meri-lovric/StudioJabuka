@@ -11,10 +11,10 @@ const Navigation = () => {
     <ReactWOW animation="fadeInLeft">
       <nav id="section4" class="navbar navbar-expand-lg  ">
         <div
-          className=" row text-center container animated slideInRight wow  responsive "
+          className=" row text-center container-fluid animated slideInRight wow  responsive "
           data-wow-delay="0.6s"
         >
-          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+          
             <a
               className=" menu-item h1-responsive btn underlined  underlined--thick  "
               href="\portfolio"
@@ -27,8 +27,7 @@ const Navigation = () => {
               {" "}
               Portfolio
             </a>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+
             <a
               className=" menu-item  btn underlined  underlined--thick "
               href="\categories"
@@ -37,8 +36,7 @@ const Navigation = () => {
               {" "}
               Ponuda
             </a>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+          
             <a
               className=" menu-item  btn underlined  underlined--thick"
               href="\blog"
@@ -47,8 +45,7 @@ const Navigation = () => {
               {" "}
               Blog
             </a>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+         
             <a
               className=" menu-item underlined  btn    underlined--thick"
               href="\faq"
@@ -57,8 +54,7 @@ const Navigation = () => {
               {" "}
               Pitanja i komentari
             </a>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+         
             <a
               className=" menu-item underlined  btn btn-success   underlined--thick "
               href="\contact"
@@ -67,7 +63,7 @@ const Navigation = () => {
               Kontakt
             </a>
           </div>
-        </div>
+      
 
         <style jsx>
           {`
@@ -82,6 +78,9 @@ const Navigation = () => {
               background-color: #00c851;
               border-radius: 15px;
               color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
             * {
               box-sizing: border-box;
@@ -96,7 +95,7 @@ const Navigation = () => {
             }
             #section4 .container-fluid {
               border: 1px solid #e9e9e9;
-              padding: 100px;
+              padding: 80px;
               display: flex;
               justify-content: center;
               background-color: white;
