@@ -95,7 +95,7 @@ const Navigation = () => {
             }
             #section4 .container-fluid {
               border: 1px solid #e9e9e9;
-              padding: 80px;
+              padding: 100px;
               display: flex;
               justify-content: center;
               background-color: white;

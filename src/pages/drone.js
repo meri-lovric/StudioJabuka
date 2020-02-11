@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import PricingDrone from "../components/pricingDrone"
 import { Link } from "gatsby"
-import Drone from "../images/Prices/Drone.png"
 
 const CommercialsPage = () => {
   return (
@@ -10,17 +9,18 @@ const CommercialsPage = () => {
       <section className="grid-wrap">
         <h2
           className="h1-responsive font-weight-bold text-center my-5"
-          style={{ color: "rgb(32, 31, 29)" }}
+          style={{ color: "#00c851" }}
         >
           Cjenik snimanja iz zraka dronom
         </h2>
-        <p className="text-center font-weight-bold">
+        <p className="text-left">
           Naručenom poslu pristupamo vrlo savjesno te posjedujemo više
           bespilotnih letjelica s kojima radimo. Imamo više licenciranih pilota
-          bespilotnih zrakoplova koje vam šaljemo na prethodno dogovorenu lokaciju.
+          bespilotnih zrakoplova koje vam šaljemo na prethodno dogovorenu
+          lokaciju.
         </p>
         <PricingDrone></PricingDrone>
-        <p className="text-center font-weight-bold my-5">
+        <p className="text-center">
           U cjeniku je prikazana osnovna cijena, međutim ona ovisi o složenosti
           i mjestu snimanja.
           <br /> Ukoliko želite znati točan iznos ili imate drugih pitanja,
@@ -35,7 +35,8 @@ const CommercialsPage = () => {
       <style jsx>{`
         .grid-wrap {
           padding: 4em 10em;
-          background-image: url(${Drone});
+          background-color: #ffffff;
+          background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
         }
         p {
           font-size: 1.2em;

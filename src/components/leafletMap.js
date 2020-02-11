@@ -13,7 +13,7 @@ class LeafletMap extends React.Component {
             attribution = "&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           />
           {this.props.markerText !== "" &&
-          <Marker position={[43.5081,16.4402]}></Marker>
+          <Marker position={[43.5313269,16.5261697]}></Marker>
           }
         </Map>
       );

@@ -95,7 +95,7 @@ export default class Contact extends React.Component {
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          margin: 2em 5em;
+          margin: 2em;
         }
         .form-control {
           box-shadow: rgba(0, 0, 0, 0.44) 0px 35px 77px -17px;

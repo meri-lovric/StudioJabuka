@@ -72,7 +72,7 @@ class NavbarPage extends Component {
                       margin: 0,
                       width: "75px",
                       filter:
-                        " brightness(0) saturate(200%) invert(91%) sepia(100%) saturate(2428%) hue-rotate(27deg) brightness(103%) contrast(73%)",
+                        " brightness(0) saturate(200%) invert(91%) sepia(100%) saturate(2428%) hue-rotate(50deg) brightness(103%) contrast(73%)",
                       height: "75px",
                     }}
                   />{" "}

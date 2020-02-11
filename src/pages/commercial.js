@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import PricingCommercial from "../components/pricingCommercial"
 import { Link } from "gatsby"
-import Commercial from "../images/Prices/Commercial.png"
 
 const CommercialsPage = () => {
   return (
@@ -10,11 +9,11 @@ const CommercialsPage = () => {
       <section className="grid-wrap">
         <h2
           className="h1-responsive font-weight-bold text-center my-5"
-          style={{ color: "white" }}
+          style={{ color: "#00c851" }}
         >
           Cjenik snimanja za web, kataloge i promocije
         </h2>
-        <p className="text-center font-weight-bold">
+        <p className="text-left">
           Kvalitetne fotografije najvažniji su dio Vašeg oglasa. Bilo da se radi
           o prodaji nekretnine, o najmu ili reklami, fotografija daje
           vjerodostojan uvid. Zato je važno da fotografije budu atraktivne i
@@ -22,7 +21,7 @@ const CommercialsPage = () => {
           rasvjete prije samog početka.
         </p>
         <PricingCommercial></PricingCommercial>
-        <p className="text-center font-weight-bold my-5">
+        <p className="text-center  my-5">
           U cjeniku su prikazane osnovne cijene, međutim one ovise o složenosti
           i lokaciji fotografiranja.
           <br /> Ukoliko želite znati točan iznos ili imate drugih pitanja,
@@ -37,7 +36,8 @@ const CommercialsPage = () => {
       <style jsx>{`
         .grid-wrap {
           padding: 4em 10em;
-          background-image: url(${Commercial});
+          background-color: #ffffff;
+          background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
         }
         p {
           font-size: 1.2em;
