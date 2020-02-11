@@ -3,6 +3,7 @@ module.exports = {
     title: `Studio Jabuka`,
     description: `Foto Video Studio`,
     author: `@meri-lovric & @dsoljan`,
+    alias: { 'react-dom': '@hot-loader/react-dom'  },
     blogPosts: [
       {
         text: "In the beginning",

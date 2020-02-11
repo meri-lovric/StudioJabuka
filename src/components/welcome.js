@@ -18,54 +18,54 @@ const Welcome = () => {
   `)*/
   return (
     <ReactWOW animation="fadeInUp">
-      <section id="section2" class="py-5" style={{
+      <section id="section2" className="py-5" style={{
           display:"flex",
           alignItems:"center",
           height: "100vh"
         }}>
         <div
-          class="container"
+          className="container"
           
         >
-          <h2 class="h1-responsive font-weight-bold text-center mb-5" style = {{color: "#00c851"}}>
+          <h2 className="h1-responsive font-weight-bold text-center mb-5" style = {{color: "#00c851"}}>
             Foto Studio
           </h2>
-          <p class="lead grey-text text-center w-responsive mx-auto mb-5">
+          <p className="lead grey-text text-center w-responsive mx-auto mb-5">
             Studio Jabuka je fotografski studio iz Splita. Naša ekipa nudi vam
             sve fotografske usluge, od fotografiranja vjenčanja i raznih drugih
             prigoda, do obrade i retuširanja fotografija.
           </p>
-          <div class="row">
-            <div class="col-lg-5 text-center text-lg-left view overlay rounded z-depth-1">
-              <img class="img-fluid" src={Sample} alt="Sample image"></img>
-              <div class="mask rgba-white-slight"></div>
+          <div className="row">
+            <div className="col-lg-5 text-center text-lg-left view overlay rounded z-depth-1">
+              <img className="img-fluid" src={Sample} alt="Sample image"></img>
+              <div className="mask rgba-white-slight"></div>
             </div>
 
-            <div class="col-lg-7">
-              <div class="row mb-3">
-                <div class="col-xl-10 col-md-11 col-10">
-                  <h5 class="font-weight-bold mb-3">Foto</h5>
-                  <p class="grey-text">
+            <div className="col-lg-7">
+              <div className="row mb-3">
+                <div className="col-xl-10 col-md-11 col-10">
+                  <h5 className="font-weight-bold mb-3">Foto</h5>
+                  <p className="grey-text">
                     Snimanja foto-sessiona na lokaciji i u studiju, obrade i
                     retuširanja fotografija
                   </p>
                 </div>
               </div>
 
-              <div class="row mb-3">
-                <div class="col-xl-10 col-md-11 col-10">
-                  <h5 class="font-weight-bold mb-3">Video</h5>
-                  <p class="grey-text">
+              <div className="row mb-3">
+                <div className="col-xl-10 col-md-11 col-10">
+                  <h5 className="font-weight-bold mb-3">Video</h5>
+                  <p className="grey-text">
                     Usluge snimanja i produkcije videa najviše
                     kvalitete, snimanja vjenčanja i raznih drugih prigoda.
                   </p>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-xl-10 col-md-11 col-10">
-                  <h5 class="font-weight-bold mb-3">Book</h5>
-                  <p class="grey-text mb-0">
+              <div className="row">
+                <div className="col-xl-10 col-md-11 col-10">
+                  <h5 className="font-weight-bold mb-3">Book</h5>
+                  <p className="grey-text mb-0">
                     Izrade book-ova za modele, pripreme za tisak, izrade foto
                     albuma svih vrsta, izrade najkvalitetnijih tiskanih
                     book-albuma...

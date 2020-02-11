@@ -56,33 +56,33 @@ const Projects = () => {
   return (
     <section
       id="section3"
-      class="text-center py-5"
+      className="text-center py-5"
       style={{ backgroundColor: " #eee"}}
     >
-      <div class="container">
-        <h2 class="h1-responsive font-weight-bold mb-5" style = {{color: "#00c851"}}>Novosti</h2>
-        <p class="grey-text w-responsive mx-auto mb-5">
+      <div className="container">
+        <h2 className="h1-responsive font-weight-bold mb-5" style = {{color: "#00c851"}}>Novosti</h2>
+        <p className="grey-text w-responsive mx-auto mb-5">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit est laborum.
         </p>
 
-        <div class="row text-center">
+        <div className="row text-center">
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4" key={node.id}>
-              <div class="view overlay rounded z-depth-1">
+            <div className="col-lg-4 col-md-12 mb-lg-0 mb-4" key={node.id}>
+              <div className="view overlay rounded z-depth-1">
               <Img
-                      className="img-fluid"
+                      classNameName="img-fluid"
                       fluid={node.frontmatter.image.childImageSharp.fluid}
                     />
                 <a href={node.fields.slug}>
-                  <div class="mask rgba-white-slight"></div>
+                  <div className="mask rgba-white-slight"></div>
                 </a>
               </div>
-              <div class="card-body pb-0">
-                <h4 class="font-weight-bold my-3"></h4>
-                <p class="grey-text">{node.excerpt}</p>
-                <a class="btn btn-purple btn-sm" href={node.fields.slug}>View project</a>
+              <div className="card-body pb-0">
+                <h4 className="font-weight-bold my-3"></h4>
+                <p className="grey-text">{node.excerpt}</p>
+                <a className="btn btn-purple btn-sm" href={node.fields.slug}>View project</a>
               </div>
             </div>
           ))}

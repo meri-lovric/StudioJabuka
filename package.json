@@ -35,6 +35,7 @@
     "react-dom": "^16.12.0",
     "react-google-recaptcha": "^2.0.1",
     "react-helmet": "^5.2.1",
+    "@hot-loader/react-dom": "^16.8.6",
     "react-icons": "^3.8.0",
     "react-lazyload": "^2.6.5",
     "react-leaflet": "^2.6.1",

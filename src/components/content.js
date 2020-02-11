@@ -47,12 +47,12 @@ export const Content = ({ data }) => {
     <React.Fragment>
       {" "}
       <nav
-              class="navbar navbar-expand-md navbar-light md-light"
+              className="navbar navbar-expand-md navbar-light md-light"
               style={{ padding: "0px" }}
             >
               <ul
                 id="menu"
-                class="navbar-nav"
+                className="navbar-nav"
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -65,48 +65,48 @@ export const Content = ({ data }) => {
               >
                 <a
                   href="#section1"
-                  class="nav-link"
+                  className="nav-link"
                   style={{
                     color: "#a8dd53",
                     fontFamily: "EnriquetaMedium",
                   }}
                 >
-                  <li class="icon" id="uno">
+                  <li className="icon" id="uno">
                     I
                   </li>
                 </a>
                 <a
                   href="#section2"
-                  class="nav-link"
+                  className="nav-link"
                   style={{
                     color: "#a8dd53",
                     fontFamily: "EnriquetaMedium",
                   }}
                 >
-                  <li class="icon" id="dos">
+                  <li className="icon" id="dos">
                     II
                   </li>
                 </a>
                 <a
                   href="#section3"
-                  class="nav-link"
+                  className="nav-link"
                   style={{
                     color: "#a8dd53",
                     fontFamily: "EnriquetaMedium",
                   }}
                 >
-                  <li class="icon" id="tres">
+                  <li className="icon" id="tres">
                     III
                   </li>
                 </a><a
                   href="#section4"
-                  class="nav-link"
+                  className="nav-link"
                   style={{
                     color: "#a8dd53",
                     fontFamily: "EnriquetaMedium",
                   }}
                 >
-                  <li class="icon" id="quattro">
+                  <li className="icon" id="quattro">
                     IV
                   </li>
                 </a>
