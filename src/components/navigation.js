@@ -9,7 +9,7 @@ import ReactWOW from "react-wow"
 const Navigation = () => {
   return (
     <ReactWOW animation="fadeInLeft">
-      <nav id="section4" class="navbar navbar-expand-lg  ">
+      <nav id="section4" className="navbar navbar-expand-lg  ">
         <div
           className=" row text-center container-fluid animated slideInRight wow  responsive "
           data-wow-delay="0.6s"
@@ -49,10 +49,10 @@ const Navigation = () => {
             <a
               className=" menu-item underlined  btn    underlined--thick"
               href="\faq"
-              style={{ backgroundColor: "#00c851" }}
+              style={{ backgroundColor: "#00c851"}}
             >
               {" "}
-              Pitanja i komentari
+              Pitanja/komentari
             </a>
          
             <a
@@ -80,7 +80,7 @@ const Navigation = () => {
               color: white;
               display: flex;
               align-items: center;
-              justify-content: center;
+              justify-content: space-around;
             }
             * {
               box-sizing: border-box;

@@ -80,9 +80,15 @@ export const Footer = () => {
               "invert(99%) sepia(0%) saturate(2%) hue-rotate(184deg) brightness(75%) contrast(100%)",
           }}
         >
-          <img src={Facebook} alt="facebook" />
-          <img src={Instagram} alt="instagram" />
-          <img src={Vimeo} alt="vimeo" />
+          <a href = "https://hr-hr.facebook.com/studiojabuka/" target="_blank">
+            <img src={Facebook} alt="facebook" /> 
+            </a>
+          <a href = "https://www.instagram.com/studiojabuka/?hl=hr" target="_blank">
+            <img src={Instagram} alt="instagram" />
+          </a>
+          <a href="https://vimeo.com/studiojabuka" target="_blank">
+            <img src={Vimeo} alt="vimeo" />
+          </a>
         </div>
       </section>
       <div
