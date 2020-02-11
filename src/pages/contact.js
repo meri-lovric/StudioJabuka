@@ -2,6 +2,7 @@ import React from "react"
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn } from "mdbreact"
 import Layout from "../components/layout"
 import Contact from "../components/contactForm"
+import LeafletMap from "../components/leafletMap"
 
 
 const ContactPage = () => {
@@ -79,6 +80,9 @@ const ContactPage = () => {
             </MDBRow>
           </MDBCol>
         </MDBRow>
+        <LeafletMap position={[43.5081,16.4402]} zoom={17}>
+
+        </LeafletMap>
       </section>
 
       <style jsx>{`
