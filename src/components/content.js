@@ -148,6 +148,9 @@ export const Content = ({ data }) => {
         #gatsby-focus-wrapper > div > div > a.carousel-control-prev{
           left:50px;
         }
+        #layout > div {
+          z-index:1;
+        }
 
           .page {
             width: 100%;

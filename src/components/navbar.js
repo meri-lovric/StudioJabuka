@@ -18,6 +18,7 @@ import {
 } from "mdbreact"
 import Logo from "../images/Logo.png"
 import { Link } from "gatsby"
+import Authentication from "./authentication"
 
 class NavbarPage extends Component {
   state = {
@@ -90,7 +91,6 @@ class NavbarPage extends Component {
                           borderRadius: "3em",
                           fontSize: "3em",
                         }}
-                        
                       />
                     </MDBDropdownToggle>
                     <MDBDropdownMenu className="dropdown-default">
@@ -113,7 +113,8 @@ class NavbarPage extends Component {
                   </MDBDropdown>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBDropdown>
+                  <Authentication></Authentication>
+                  {/*<MDBDropdown>
                     <MDBDropdownToggle nav caret>
                       <MDBIcon
                         icon="user-circle"
@@ -123,7 +124,7 @@ class NavbarPage extends Component {
                           borderRadius: "3em",
                           fontSize: "3em",
                         }}
-                      />
+                      ></MDBIcon>
                     </MDBDropdownToggle>
                     <MDBDropdownMenu className="dropdown-default">
                       <MDBDropdownItem href="#!">Action</MDBDropdownItem>
@@ -137,7 +138,7 @@ class NavbarPage extends Component {
                         Something else here
                       </MDBDropdownItem>
                     </MDBDropdownMenu>
-                  </MDBDropdown>
+                      </MDBDropdown>*/}
                 </MDBNavItem>
               </div>
             </MDBContainer>
@@ -158,7 +159,6 @@ class NavbarPage extends Component {
             display: flex;
             justify-content: space-between;
           }
-          
 
           .navbar {
             box-shadow: none;
@@ -168,11 +168,11 @@ class NavbarPage extends Component {
             transition-duration: 0.3s;
             transition-property: transform;
           }
-        
+
           #header-nav .navbar-nav {
             position: inherit;
           }
-          
+
           #menu li {
             margin-top: 10px;
             border-bottom: 1px solid #9e9e9e;
@@ -181,7 +181,6 @@ class NavbarPage extends Component {
             list-style-type: none;
           }
 
-         
           #header-nav > li > div > a {
             padding-bottom: 1em;
           }
@@ -198,7 +197,6 @@ class NavbarPage extends Component {
           #header-nav > div > div:nth-child(2) > li:nth-child(2) > div > a {
             color: #00c851 !important;
           }
-          
         `}</style>
       </React.Fragment>
     )
