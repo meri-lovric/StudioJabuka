@@ -87,14 +87,12 @@ const PortfolioLayout = ({}) => {
         </div>
       </div>
       <style jsx>{`
-      #portfolio-grid .view .gatsby-image-wrapper{
-        position:initial !important;
-       
-      }
-      #portfolio-grid > div > div > div{
-        margin-bottom: 3vh !important;
-      }
-      
+        #portfolio-grid .view .gatsby-image-wrapper {
+          position: initial !important;
+        }
+        #portfolio-grid > div > div > div {
+          margin-bottom: 3vh !important;
+        }
       `}</style>
     </React.Fragment>
   )

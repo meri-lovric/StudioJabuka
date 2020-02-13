@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery, useStaticQuery } from "gatsby"
 import Search from "./textSearch"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 import {
   MDBRow,
@@ -51,7 +52,6 @@ const BlogPage = () => {
                   }
                 }
               }
-              
             }
             excerpt
             timeToRead
@@ -62,15 +62,15 @@ const BlogPage = () => {
   `)
   return (
     <div>
-    <MDBCard className=" px-5 pb-5">
-      <MDBCardBody>
-        <Search></Search>
-        <p className="text-center w-responsive mx-auto mb-5">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
+      <MDBCard className=" px-5 pb-5">
+        <MDBCardBody>
+          <Search></Search>
+          <p className="text-center w-responsive mx-auto mb-5">
+            Kvaliteta usluga i proizvoda naš je prioritet, znanje i entuzijazam
+            naš pokretač, a profesionalna oprema, ljudstvo i vaše povjerenje
+            naša potpora. <br/>
+            Donosimo vam najnovije vijesti vezane uz studio, pogodnosti, 
+          </p>
 
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <MDBRow
@@ -88,7 +88,6 @@ const BlogPage = () => {
                     hover
                     waves
                   >
-                    
                     <Img
                       className="img-fluid"
                       fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -106,8 +105,13 @@ const BlogPage = () => {
                     {node.frontmatter.tag}
                   </h6>
                 </a>
-                <Link to={node.fields.slug} style={{textDecoration: 'none'}}><h3 className="title font-weight-bold mb-3 p-0 green-text"> <strong>{node.frontmatter.title}</strong></h3></Link>           
-                
+                <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
+                  <h3 className="title font-weight-bold mb-3 p-0 green-text">
+                    {" "}
+                    <strong>{node.frontmatter.title}</strong>
+                  </h3>
+                </Link>
+
                 <p className="excerpt">{node.excerpt}</p>
 
                 <p>
@@ -132,7 +136,14 @@ const BlogPage = () => {
           <hr className="my-5" />
         </MDBCardBody>
       </MDBCard>
-      </div>
+      <style>
+        {`
+      .px-5 {
+        background-color: #ffffff;
+        background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+      }`}
+      </style>
+    </div>
   )
 }
 

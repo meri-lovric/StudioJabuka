@@ -15,7 +15,7 @@ const ContactPage = () => {
           >
             Kontaktirajte nas
           </h2>
-          <p className="text-left w-responsive mx-auto pb-5">
+          <p className="text-lg-left w-responsive mx-auto pb-5">
             Kako bismo Vam poslali najbolju ponudu, navedite posebne želje, Vaš
             okvirni budžet, očekivanja. Bit će nam drago prilagoditi se, jer
             uvijek pridajemo pažnju detaljima i Vašim potrebama. <br />

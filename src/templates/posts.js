@@ -24,6 +24,9 @@ export default ({ data }) => {
       #layout{
         grid-gap:20vh;
       }
+      #layout > div.blog-text > h2 {
+        color: #9e9e9e !important;
+      }
       `}</style>
     </Layout>
   )

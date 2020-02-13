@@ -52,7 +52,7 @@ const Navigation = () => {
               style={{ backgroundColor: "#00c851"}}
             >
               {" "}
-              Pitanja/komentari
+              FAQ
             </a>
          
             <a

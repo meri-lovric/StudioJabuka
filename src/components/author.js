@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBCardHeader, MDBIcon, MDBMedia } from "mdbreact";
+import Comments from "remark-ninja-react"
 
 const BlogComponentsPage = ({children}) => {
   return (
@@ -42,9 +43,24 @@ const BlogComponentsPage = ({children}) => {
           </MDBMedia>
         </MDBMedia>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"></link>
-
+        <Comments
+                siteId="0a8e758d-d437-4231-a271-ea43ee0b9c25"
+                threadSlug="komentari"
+                />
+      <style>
+        {`
+        #layout > div.container > div:nth-child(4) > form {
+          margin-top: 2em;
+        }
+        #layout > div.container > div.media.p-4.bg-white > div.media-body > h5 {
+          color: #00c851 !important;
+        }
+        #layout > div.container > div.card-header.border-0.font-weight-bold.d-flex.justify-content-between > ul {
+          color: #00c851 !important;
+        }
+        `}
+      </style>
       </MDBContainer>
   );
 }
-
 export default BlogComponentsPage;
