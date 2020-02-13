@@ -7,7 +7,7 @@ module.exports = {
     blogPosts: [
       {
         text: "In the beginning",
-        path: "/blog-post/in-the-beginning",
+        path: '../blog-posts/blog-4',
       },
       {
         text: "U blizini",

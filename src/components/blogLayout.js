@@ -28,7 +28,7 @@ const BlogPage = () => {
               title
               date
               author
-              tag
+              tags
               image {
                 childImageSharp {
                   fluid(

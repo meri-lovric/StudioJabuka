@@ -22,7 +22,7 @@ const Projects = () => {
               title
               date
               author
-              tag
+              tags
               image {
                 childImageSharp {
                   fluid(

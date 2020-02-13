@@ -30,7 +30,7 @@ function AuthStatusView() {
     <div>
       <div>
       <MDBBtn className ="loginButton" role="button" color="success" tag="a" onClick={() => setDialog(true)}>
-          {isLoggedIn ? `Hello ${name}, Log out here!` : 'Log in'}</MDBBtn>
+          {isLoggedIn ? `Hello, log out here!` : 'Log in'}</MDBBtn> {/*ubacit name*/}
       </div>
       <IdentityModal
         showDialog={dialog}
@@ -56,6 +56,9 @@ function AuthStatusView() {
       .loginButton {
         border-radius:40px;
         font-weight:500;
+      }
+      #tabs--1--panel--0 > form > button {
+        display:none;
       }
       `}
       </style>
