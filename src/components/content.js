@@ -1,12 +1,9 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import useTypewriter from "react-typewriter-hook"
 import Carousel from "react-bootstrap/Carousel"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import EnriquetaMedium from "../fonts/Enriqueta-Medium.ttf"
 export const Content = ({ data }) => {
   function MagicWriter(word) {
     const typing = useTypewriter(word)
@@ -19,6 +16,7 @@ export const Content = ({ data }) => {
       allFile(filter: { absolutePath: { regex: "//images/SampleImages//" } }) {
         edges {
           node {
+            id
             childImageSharp {
               fluid(
                 quality: 100
@@ -51,7 +49,7 @@ export const Content = ({ data }) => {
               style={{ padding: "0px" }}
             >
               <ul
-                id="menu"
+                id="section-buttons"
                 className="navbar-nav"
                 style={{
                   display: "flex",
@@ -72,7 +70,7 @@ export const Content = ({ data }) => {
                   }}
                 >
                   <li className="icon" id="uno">
-                    I
+                  <i className="fas fa-circle"></i>
                   </li>
                 </a>
                 <a
@@ -83,8 +81,8 @@ export const Content = ({ data }) => {
                     fontFamily: "EnriquetaMedium",
                   }}
                 >
-                  <li className="icon" id="dos">
-                    II
+                  <li className="icon" id="due">
+                  <i className="fas fa-circle"></i>
                   </li>
                 </a>
                 <a
@@ -95,8 +93,8 @@ export const Content = ({ data }) => {
                     fontFamily: "EnriquetaMedium",
                   }}
                 >
-                  <li className="icon" id="tres">
-                    III
+                  <li className="icon" id="tre">
+                  <i className="fas fa-circle"></i>
                   </li>
                 </a><a
                   href="#section4"
@@ -107,7 +105,7 @@ export const Content = ({ data }) => {
                   }}
                 >
                   <li className="icon" id="quattro">
-                    IV
+                  <i className="fas fa-circle"></i>
                   </li>
                 </a>
               </ul>
@@ -115,7 +113,7 @@ export const Content = ({ data }) => {
 
       <Carousel>
         {query.allFile.edges.map(({ node }) => (
-          <Carousel.Item>
+          <Carousel.Item key={node.id}>
            
             <Img
               style={{ height: "100vh" }}
@@ -227,7 +225,7 @@ export const Content = ({ data }) => {
 
           .icon {
             color: #fff;
-            font-size: 32px;
+
             display: block;
             font-family: EnriquetaMedium;
           }
@@ -261,6 +259,16 @@ export const Content = ({ data }) => {
             -o-transform: scale(1.2) !important;
           }
 
+          #section-buttons{
+            display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  width: auto;
+                  backdrop-filter: blur(5px) contrast(.8);
+                  height: 100%;
+                  z-index: 15;
+          }
+
           ul {
             position: fixed;
             z-index: 1;
@@ -268,20 +276,23 @@ export const Content = ({ data }) => {
             bottom: 0;
             left: 0;
             margin: auto;
-            height: 280px;
+            height: 100px;
             width: 10%;
             padding: 0;
             text-align: center;
           }
-
-          #menu .icon {
-            margin: 30px 0;
+          #section-buttons li{
+            height:100%;
+          }
+          #section-buttons .icon {
             transition: all 0.5s ease-out !important;
             -webkit-transition: all 0.5s ease-out;
             -moz-transition: all 0.5s ease-out;
             -o-transition: all 0.5s ease-out;
           }
-
+          #section-buttons a{
+            height:5%;
+          }
           a {
             text-decoration: none;
           }

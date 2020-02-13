@@ -5,14 +5,9 @@ import Vimeo from "../images/Vimeo.png"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
+ 
   MDBMask,
-  MDBIcon,
   MDBView,
-  MDBBtn,
 } from "mdbreact"
 export const Footer = () => {
   const query = useStaticQuery(graphql`
@@ -20,6 +15,7 @@ export const Footer = () => {
       allFile(filter: { absolutePath: { regex: "//images/Instagram//" } }) {
         edges {
           node {
+            id
             childImageSharp {
               fluid(
                 quality: 100
@@ -51,18 +47,7 @@ export const Footer = () => {
   return (
     <footer
       className="container-fluid"
-      style={{
-        padding: "20px 0",
-        width: "100vw",
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "row",
-        alignItems: "center",
-        zIndex: 10,
-        marginBottom: `0px`,
-        backgroundColor: "#201f1d",
-        color: "white",
-      }}
+      id="footer"
     >
       <section
         className="SocialMedia"
@@ -70,6 +55,7 @@ export const Footer = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent:"center"
         }}
       >
         <p>Find us here</p>
@@ -80,13 +66,15 @@ export const Footer = () => {
               "invert(99%) sepia(0%) saturate(2%) hue-rotate(184deg) brightness(75%) contrast(100%)",
           }}
         >
-          <a href = "https://hr-hr.facebook.com/studiojabuka/" target="_blank">
-            <img src={Facebook} alt="facebook" /> 
-            </a>
-          <a href = "https://www.instagram.com/studiojabuka/?hl=hr" target="_blank">
+          <a href="https://hr-hr.facebook.com/studiojabuka/" >
+            <img src={Facebook} alt="facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/studiojabuka/?hl=hr"
+          >
             <img src={Instagram} alt="instagram" />
           </a>
-          <a href="https://vimeo.com/studiojabuka" target="_blank">
+          <a href="https://vimeo.com/studiojabuka">
             <img src={Vimeo} alt="vimeo" />
           </a>
         </div>
@@ -97,70 +85,68 @@ export const Footer = () => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          padding: "20px",
+          padding: "10px",
         }}
       >
-        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-          <Img
-            fluid={query.allFile.edges[0].node.childImageSharp.fluid}
-            alt="footer-1"
-            style={{ height: "10vw", width: "10vw", margin: "10px" }}
-          />
-          <a href="#!">
-            <MDBMask overlay="white-slight" />
-          </a>
-        </MDBView>
-        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-          <Img
-            fluid={query.allFile.edges[1].node.childImageSharp.fluid}
-            alt="footer-1"
-            style={{ height: "10vw", width: "10vw", margin: "10px" }}
-          />
-          <a href="#!">
-            <MDBMask overlay="white-slight" />
-          </a>
-        </MDBView>
-        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-          <Img
-            fluid={query.allFile.edges[2].node.childImageSharp.fluid}
-            alt="footer-1"
-            style={{ height: "10vw", width: "10vw", margin: "10px" }}
-          />
-          <a href="#!">
-            <MDBMask overlay="white-slight" />
-          </a>
-        </MDBView>
-        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-          <Img
-            fluid={query.allFile.edges[3].node.childImageSharp.fluid}
-            alt="footer-1"
-            style={{ height: "10vw", width: "10vw", margin: "10px" }}
-          />
-          <a href="#!">
-            <MDBMask overlay="white-slight" />
-          </a>
-        </MDBView>
-        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-          <Img
-            fluid={query.allFile.edges[4].node.childImageSharp.fluid}
-            alt="footer-1"
-            style={{ height: "10vw", width: "10vw", margin: "10px" }}
-          />
-          <a href="#!">
-            <MDBMask overlay="white-slight" />
-          </a>
-        </MDBView>
-        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-          <Img
-            fluid={query.allFile.edges[5].node.childImageSharp.fluid}
-            alt="footer-1"
-            style={{ height: "10vw", width: "10vw", margin: "10px" }}
-          />
-          <a href="#!">
-            <MDBMask overlay="white-slight" />
-          </a>
-        </MDBView>
+        {query.allFile.edges.map(({ node }) => (
+          <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves key={node.id}>
+            <Img
+              fluid={node.childImageSharp.fluid}
+              alt={"footer" + node.id}
+              style={{ height: "10vw", width: "10vw", margin: "10px" }}
+            />
+            <a href="#!">
+              <MDBMask overlay="white-slight" />
+            </a>
+          </MDBView>
+        ))}
       </div>
+      <style jsx>{`
+      #footer{
+        padding: 20px 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        z-index: 10;
+        margin-bottom: 0px;
+        background-color: #201f1d;
+        color: white
+      }
+      .Icons{
+        display:flex;
+        justify-content:space-around;
+
+      }
+      .Icons a {
+       display:flex;
+       justify-content:center;
+       width: 45%;
+      }
+      .Icons img{
+        width: 45%;
+
+      }
+        @media screen and (max-width: 1200px) {
+          .Icons a {
+            width: 45%;
+          }
+          .Icons img {
+            width: 45%;
+          }
+          .SocialMedia p {
+            font-size: 85%;
+          }
+          
+        }
+        @media screen and (max-width: 950px) {
+          #footer{
+            flex-direction:column-reverse;
+
+          }
+        }
+      `}</style>
     </footer>
   )
 }

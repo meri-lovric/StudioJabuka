@@ -1,6 +1,4 @@
 import React from "react"
-import Header from "../components/header"
-import Footer from "../components/footer"
 import Author from "../components/author"
 import Layout from "../components/layout"
 export default ({ data }) => {

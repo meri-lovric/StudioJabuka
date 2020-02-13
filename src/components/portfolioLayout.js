@@ -2,48 +2,46 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import ReactWOW from "react-wow"
 import {
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
+ 
   MDBMask,
-  MDBIcon,
   MDBView,
-  MDBBtn,
 } from "mdbreact"
-const PortfolioLayout = ({}) => {
-  const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { absolutePath: { regex: "//images/Portfolio//" } }) {
-        edges {
-          node {
-            childImageSharp {
-              fluid(
-                quality: 100
-                traceSVG: { threshold: 10 }
-                webpQuality: 100
-                maxWidth: 350
-                maxHeight: 235
-              ) {
-                aspectRatio
-                originalImg
-                base64
-                originalName
-                src
-                srcSet
-                srcSetWebp
-                srcWebp
-                presentationHeight
-                presentationWidth
+const PortfolioLayout = () => {
+  const query = useStaticQuery(graphql`
+  {
+    allAirtable {
+      edges {
+        node {
+          data {
+            slika {
+              localFiles {
+                childImageSharp {
+                  fluid(webpQuality: 100, pngQuality: 100, jpegQuality: 100, maxHeight: 235, maxWidth:350) {
+                    base64
+                    tracedSVG
+                    aspectRatio
+                    src
+                    srcSet
+                    srcWebp
+                    srcSetWebp
+                    sizes
+                    originalImg
+                    originalName
+                    presentationWidth
+                    presentationHeight
+                  }
+                }
               }
             }
+            Tip
           }
+          id
         }
       }
     }
-  `)
+  }
+`)
   return (
     <React.Fragment>
       <div
@@ -63,8 +61,8 @@ const PortfolioLayout = ({}) => {
         }}
       >
         <div class="row my-n25 " style={{}}>
-          {data.allFile.edges.map(({ node }) => (
-            <div class="col-lg-4 w-50 h-50  px-25 py-25 ">
+          {query.allAirtable.edges.map(({ node }) => (
+            <div class="col-lg-4 w-50 h-50  px-25 py-25 " key={node.id}>
               <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
                 <Img
                   style={{
@@ -74,8 +72,8 @@ const PortfolioLayout = ({}) => {
                     height: "100%",
                   }}
                   key={node.id}
-                  fluid={node.childImageSharp.fluid}
-                  alt=""
+                  fluid={node.data.slika.localFiles[0].childImageSharp.fluid}
+                  alt={node.data.Tip}
                   class="img-fluid z-depth-1-half mask"
                 />
                 <a href="#!">

@@ -80,6 +80,24 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `keyrvK81QvGIrSs6I`,
+        tables: [
+          {
+            baseId: `apptWJSnYQYbLI22B`,
+            tableName: `Photographs`,
+            mapping: { 'slika': `fileNode` },
+          },
+          // We can add other bases/tables here, too!
+          //{
+            //baseId: `AIRTABLE_BASE_ID`,
+            //tableName: `Sides`
+          //}
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

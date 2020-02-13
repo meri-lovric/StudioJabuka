@@ -5,8 +5,6 @@ import "mdbootstrap/css/bootstrap.min.css"
 import "mdbootstrap/css/mdb.min.css"
 
 import { useStaticQuery, graphql } from "gatsby"
-import ReactWOW from "react-wow"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import Img from "gatsby-image"
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -15,6 +13,7 @@ const Projects = () => {
         totalCount
         edges {
           node {
+            id
             fields {
               slug
             }
@@ -68,10 +67,11 @@ const Projects = () => {
         </p>
 
         <div className="row text-center">
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMarkdownRemark.edges.slice(0,3).map(({ node }) => (
             <div className="col-lg-4 col-md-12 mb-lg-0 mb-4" key={node.id}>
               <div className="view overlay rounded z-depth-1">
               <Img
+              key={node.id}
                       classNameName="img-fluid"
                       fluid={node.frontmatter.image.childImageSharp.fluid}
                     />
@@ -80,7 +80,7 @@ const Projects = () => {
                 </a>
               </div>
               <div className="card-body pb-0">
-                <h4 className="font-weight-bold my-3"></h4>
+                <h4 className="font-weight-bold my-3">Sample</h4>
                 <p className="grey-text">{node.excerpt}</p>
                 <a className="btn btn-purple btn-sm" href={node.fields.slug}>View project</a>
               </div>

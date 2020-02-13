@@ -2,18 +2,13 @@ import React, { Component } from "react"
 import {
   MDBNavbar,
   MDBNavbarBrand,
-  MDBNavbarNav,
   MDBNavItem,
-  MDBCollapse,
   MDBContainer,
-  MDBHamburgerToggler,
 } from "mdbreact"
 import {
-  MDBNavbarToggler,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
-  MDBDropdownItem,
   MDBIcon,
 } from "mdbreact"
 import Logo from "../images/Logo.png"
@@ -41,7 +36,6 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <React.Fragment>
         <MDBContainer>
           <MDBNavbar
             id="header-nav"
@@ -114,37 +108,11 @@ class NavbarPage extends Component {
                 </MDBNavItem>
                 <MDBNavItem>
                   <Authentication></Authentication>
-                  {/*<MDBDropdown>
-                    <MDBDropdownToggle nav caret>
-                      <MDBIcon
-                        icon="user-circle"
-                        style={{
-                          color: "#00c851",
-                          backgroundColor: "white",
-                          borderRadius: "3em",
-                          fontSize: "3em",
-                        }}
-                      ></MDBIcon>
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu className="dropdown-default">
-                      <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                      <MDBDropdownItem href="#!">
-                        Another Action
-                      </MDBDropdownItem>
-                      <MDBDropdownItem href="#!">
-                        Something else here
-                      </MDBDropdownItem>
-                      <MDBDropdownItem href="#!">
-                        Something else here
-                      </MDBDropdownItem>
-                    </MDBDropdownMenu>
-                      </MDBDropdown>*/}
                 </MDBNavItem>
               </div>
             </MDBContainer>
           </MDBNavbar>
-        </MDBContainer>
-        <style jsx>{`
+          <style jsx>{`
           .dropdown-menu {
             opacity: 75%;
             backdrop-filter: blur(5px) contrast(0.8);
@@ -198,7 +166,9 @@ class NavbarPage extends Component {
             color: #00c851 !important;
           }
         `}</style>
-      </React.Fragment>
+        </MDBContainer>
+       
+      
     )
   }
 }

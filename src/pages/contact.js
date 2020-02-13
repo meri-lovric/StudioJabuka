@@ -24,7 +24,6 @@ const ContactPage = () => {
             <a
               className="mail"
               href="mailto:info@studiojabuka.com"
-              target="_blank"
             >
               {" "}
               info@studiojabuka.com
@@ -69,7 +68,6 @@ const ContactPage = () => {
                 <MDBCol md="4">
                   <a
                     href="https://goo.gl/maps/dk4ZoQ1iMyVkspfg9"
-                    target="_blank"
                   >
                     <MDBBtn color="success" tag="a">
                       <MDBIcon
@@ -91,7 +89,7 @@ const ContactPage = () => {
                   </a>
                 </MDBCol>
                 <MDBCol md="4">
-                  <a href="mailto:info@studiojabuka.com" target="_blank">
+                  <a href="mailto:info@studiojabuka.com" >
                     <MDBBtn color="success" tag="a">
                       <MDBIcon icon="envelope" style={{ color: "white" }} />
                     </MDBBtn>

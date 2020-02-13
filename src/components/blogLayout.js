@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery, useStaticQuery } from "gatsby"
+import { graphql,  useStaticQuery } from "gatsby"
 import Search from "./textSearch"
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -21,7 +21,9 @@ const BlogPage = () => {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         totalCount
         edges {
+          
           node {
+            id
             fields {
               slug
             }
@@ -114,13 +116,13 @@ const BlogPage = () => {
 
                 <p className="excerpt">{node.excerpt}</p>
 
-                <p>
+                <div>
                   by
-                  <p className="author">{node.frontmatter.author}</p>,{" "}
-                  <p className="date">
+                   <div className="author">{node.frontmatter.author}</div>,{" "}
+                  <div className="date">
                     {node.frontmatter.date} {node.timeToRead}min read
-                  </p>
-                </p>
+                  </div>
+                </div>
                 <MDBBtn color="success" size="md" className="waves-light ">
                   <Link
                     to={node.fields.slug}

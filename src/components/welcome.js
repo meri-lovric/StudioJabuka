@@ -1,27 +1,36 @@
 import React from "react"
 import "../styles/description.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Sample from "../images/SampleImages/15110997_1379393578791937_2498445392797748409_o.jpg"
 import { useStaticQuery, graphql } from "gatsby"
 import ReactWOW from "react-wow"
+import Img from "gatsby-image"
 const Welcome = () => {
-  /*const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-      allFile(filter: {internal: {mediaType: {eq: "text/markdown"}}}) {
-        edges {
-          node {
-            id
+      file(absolutePath: {regex: "//images/Predlozak//"}) {
+        id
+        childImageSharp {
+          fluid(quality: 100, traceSVG: {turdSize: 10}, webpQuality: 100, maxHeight: 320, maxWidth: 400) {
+            aspectRatio
+            originalImg
+            base64
+            originalName
+            src
+            srcSet
+            srcSetWebp
+            srcWebp
+            presentationHeight
+            presentationWidth
           }
+          id
         }
       }
     }
-  `)*/
+  `)
   return (
     <ReactWOW animation="fadeInUp">
       <section id="section2" className="py-5" style={{
-          display:"flex",
-          alignItems:"center",
-          height: "100vh"
+          
         }}>
         <div
           className="container"
@@ -37,7 +46,7 @@ const Welcome = () => {
           </p>
           <div className="row">
             <div className="col-lg-5 text-center text-lg-left view overlay rounded z-depth-1">
-              <img className="img-fluid" src={Sample} alt="Sample image"></img>
+              <Img className="img-fluid" fluid={data.file.childImageSharp.fluid} alt="Sample image"/>
               <div className="mask rgba-white-slight"></div>
             </div>
 
@@ -76,6 +85,22 @@ const Welcome = () => {
           </div>
         </div>
       </section>
+      <style jsx>{`
+      .row{
+        margin:20px;
+      }
+      #section2{
+        display:flex;
+          align-items:center;
+          height: 100vh
+      }
+        @media screen and (max-width: 950px) {
+          #section2{
+            display:flex;
+          align-items:center;
+          height: 150vh
+          }
+          `}</style>
     </ReactWOW>
   )
 }

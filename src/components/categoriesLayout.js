@@ -7,18 +7,18 @@ import { Link } from "gatsby"
 
 const Categories = () => {
   return (
-    <section class="grid-wrap text-center">
-      <Link to="/weddings" class="tile text-center">
+    <section className="grid-wrap text-center">
+      <Link to="/weddings" className="tile text-center">
         <img src={Sample3} alt="" />
-        <div class="text">
+        <div className="text">
           <h1>Vjenčanja</h1>
-          <h2 class="animate-text">Foto & video</h2>
-          <p class="animate-text">
+          <h2 className="animate-text">Foto & video</h2>
+          <p className="animate-text">
             U želji da maksimalno udovoljimo i najzahtjevnijim mladencima
             formirali smo nekoliko atraktivnih snimateljskih aranžmana kojima
             ćemo oživiti vašu svadbenu svečanost.{" "}
           </p>
-          <div class="dots">
+          <div className="dots">
             <span></span>
             <span></span>
             <span></span>
@@ -26,16 +26,16 @@ const Categories = () => {
         </div>
       </Link>
 
-      <Link to="/commercial" class="tile text-center">
+      <Link to="/commercial" className="tile text-center">
         <img src={Sample2} alt="" />
-        <div class="text">
+        <div className="text">
           <h1>Web, katalozi i promocija</h1>
-          <h2 class="animate-text">Foto & video</h2>
-          <p class="animate-text">
+          <h2 className="animate-text">Foto & video</h2>
+          <p className="animate-text">
             Izrađujemo sve vrste profesionalnih stilskih i kataloških
             fotografija vaših proizvoda.{" "}
           </p>
-          <div class="dots">
+          <div className="dots">
             <span></span>
             <span></span>
             <span></span>
@@ -43,17 +43,17 @@ const Categories = () => {
         </div>
       </Link>
 
-      <Link to="/drone" class="tile text-center">
+      <Link to="/drone" className="tile text-center">
         <img src={Sample1} alt="" />
-        <div class="text">
+        <div className="text">
           <h1>Dron</h1>
-          <h2 class="animate-text">Foto & video</h2>
-          <p class="animate-text">
+          <h2 className="animate-text">Foto & video</h2>
+          <p className="animate-text">
             Ako želite prezentirati hotel, kuću, vilu, kamp ili restoran uz
             more, fotografije i video snimke iz zraka daju potpuno novu i
             atraktivnu perspektivu vašim objektima i lokacijama.{" "}
           </p>
-          <div class="dots">
+          <div className="dots">
             <span></span>
             <span></span>
             <span></span>

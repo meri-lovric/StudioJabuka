@@ -1,8 +1,8 @@
 import React from "react";
 import { navigateTo } from "gatsby-link";
-import Recaptcha from "react-google-recaptcha";
+//import Recaptcha from "react-google-recaptcha";
 import { MDBIcon } from "mdbreact";
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
+//const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
   return Object.keys(data)
@@ -65,19 +65,19 @@ export default class Contact extends React.Component {
           <input type="text" name="name"  onChange={this.handleChange} placeholder="Enter your name" className="form-control"/>
         </label>
       </p>
-      <p class = "text-center">
+      <p className= "text-center">
         <label>
           <MDBIcon icon="envelope" style = {{marginRight: "10px"}}/>
           <input type="email" name="email"  onChange={this.handleChange} placeholder="Enter email" className="form-control"/>
         </label>
       </p>
-      <p class = "text-center">
+      <p className= "text-center">
         <label>
           <MDBIcon icon="comment-alt" style = {{marginRight: "10px"}}/>
           <textarea name="message" onChange={this.handleChange} placeholder="Enter message" className="form-control md-textarea"/>
         </label>
       </p>
-      <p class = "text-center">
+      <p className= "text-center">
         <button type="submit" className="btn btn-success">Send</button>
       </p>
     </form>

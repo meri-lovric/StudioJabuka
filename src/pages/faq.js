@@ -7,7 +7,7 @@ const QuestionsPage = () => (
   <Layout>
     <div className="grid-wrap">
       <h2
-        class="h1-responsive font-weight-bold text-center my-5"
+        className="h1-responsive font-weight-bold text-center my-5"
         style={{ color: "#00c851", paddingTop: "3em" }}
       >
         Pitanja i odgovori

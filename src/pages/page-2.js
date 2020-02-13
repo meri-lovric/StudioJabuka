@@ -1,10 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Sample1 from "../images/SampleImages/Sample1.jpg"
-import Sample3 from "../images/SampleImages/Sample3.jpg"
 import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
