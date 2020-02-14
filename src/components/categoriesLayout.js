@@ -64,7 +64,8 @@ const Categories = () => {
       <style jsx>{`
         body {
           background-color: #eee;
-         
+          background-color: #ffffff;
+          background: url("../images/cubes.png");
         }
         .grid-wrap {
           margin: 9em 10em;

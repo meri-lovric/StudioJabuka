@@ -13,9 +13,8 @@ href={props.name}
 {" "}
 {props.placeholder}
 <style jsx>{`
-          
             .menu-item{
-               
+                font-family: 'Prompt', sans-serif;
                 font-size:1.2em;
                 font-weight: bold;
                 width:10%;

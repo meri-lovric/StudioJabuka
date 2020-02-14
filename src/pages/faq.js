@@ -8,7 +8,7 @@ const QuestionsPage = () => (
     <div className="grid-wrap">
       <h2
         className="h1-responsive font-weight-bold text-center my-5"
-        style={{ color: "#9187adf5", paddingTop: "3em" }}
+        style={{ color: "#00c851", paddingTop: "3em" }}
       >
         Pitanja i odgovori
       </h2>
@@ -39,7 +39,8 @@ const QuestionsPage = () => (
             font-size: 1.2em;
           }
           .grid-wrap {
-           
+            background-color: #ffffff;
+            background: url("../images/cubes.png");
             padding-bottom:4em;
           }
         `}

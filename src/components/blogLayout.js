@@ -1,8 +1,8 @@
 import React from "react"
-import { graphql,  useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Search from "./textSearch"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { GiLinkedRings } from "react-icons/gi";
+import { GiLinkedRings } from "react-icons/gi"
 
 import {
   MDBRow,
@@ -19,10 +19,28 @@ import Img from "gatsby-image"
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     {
+      
+      file(name: {eq: "cubes"}, absolutePath: {regex: "//images//"}) {
+        id
+        childImageSharp {
+          fluid(quality: 100, traceSVG: {turdSize: 10}, webpQuality: 100, maxHeight: 320, maxWidth: 400) {
+            aspectRatio
+            originalImg
+            base64
+            originalName
+            src
+            srcSet
+            srcSetWebp
+            srcWebp
+            presentationHeight
+            presentationWidth
+          }
+          id
+        }
+      }
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         totalCount
         edges {
-          
           node {
             id
             fields {
@@ -81,16 +99,17 @@ const BlogPage = () => {
       }
     }
   `)
+  const backgroundPath = data.file.childImageSharp.fluid.src
   return (
     <div>
-      <MDBCard className=" px-5 pb-5">
+      <MDBCard className=" px-5 pb-5" style={{background:"url("+backgroundPath+")"}}>
         <MDBCardBody>
           <Search></Search>
           <p className="text-center w-responsive mx-auto mb-5">
             Kvaliteta usluga i proizvoda naš je prioritet, znanje i entuzijazam
             naš pokretač, a profesionalna oprema, ljudstvo i vaše povjerenje
-            naša potpora. <br/>
-            Donosimo vam najnovije vijesti vezane uz studio, pogodnosti, 
+            naša potpora. <br />
+            Donosimo vam najnovije vijesti vezane uz studio, pogodnosti,
           </p>
 
           {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -122,7 +141,6 @@ const BlogPage = () => {
               <MDBCol lg="7">
                 <a href="#!" className="green-text">
                   <h6 className="font-weight-bold mb-3">
-
                     {node.frontmatter.tags}
                   </h6>
                 </a>
@@ -137,7 +155,7 @@ const BlogPage = () => {
 
                 <div>
                   by
-                   <div className="author">{node.frontmatter.author}</div>,{" "}
+                  <div className="author">{node.frontmatter.author}</div>,{" "}
                   <div className="date">
                     {node.frontmatter.date} {node.timeToRead}min read
                   </div>
@@ -157,7 +175,12 @@ const BlogPage = () => {
           <hr className="my-5" />
         </MDBCardBody>
       </MDBCard>
-      
+      <style>
+        {`
+            .px-5 {
+              background-color: #ffffff;
+            }`}
+      </style>
     </div>
   )
 }

@@ -37,8 +37,9 @@ const ThanksPage = () => {
           margin: 4.8em 0;
         }
         .grid-wrap {
-          
-        }
+          background-color: #ffffff;
+          background: url('../images/cubes.png');
+                }
       `}</style>
     </Layout>
   )

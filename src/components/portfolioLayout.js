@@ -5,8 +5,27 @@ import Img from "gatsby-image"
 import { MDBMask, MDBView } from "mdbreact"
 
 const PortfolioLayout = () => {
+
   const query = useStaticQuery(graphql`
     {
+      file(name: {eq: "cubes"}, absolutePath: {regex: "//images//"}) {
+        id
+        childImageSharp {
+          fluid(quality: 100, traceSVG: {turdSize: 10}, webpQuality: 100, maxHeight: 320, maxWidth: 400) {
+            aspectRatio
+            originalImg
+            base64
+            originalName
+            src
+            srcSet
+            srcSetWebp
+            srcWebp
+            presentationHeight
+            presentationWidth
+          }
+          id
+        }
+      }
       allAirtable {
         edges {
           node {
@@ -39,11 +58,14 @@ const PortfolioLayout = () => {
       }
     }
   `)
+  const backgroundPath = query.file.childImageSharp.fluid.src
+
   return (
     <React.Fragment>
         <div
           id="portfolio-grid"
           class="container-fluid"
+
           style={{
             width: "inherit",
             display: "grid",
@@ -55,6 +77,7 @@ const PortfolioLayout = () => {
             position: "relative",
             height: "75vh",
             padding: "20px",
+            background:"url("+backgroundPath+")"
           }}
         >
           <div className="row my-n25 " style={{}}>
