@@ -64,8 +64,7 @@ const Categories = () => {
       <style jsx>{`
         body {
           background-color: #eee;
-          background-color: #ffffff;
-          background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+         
         }
         .grid-wrap {
           margin: 9em 10em;

@@ -157,13 +157,7 @@ const BlogPage = () => {
           <hr className="my-5" />
         </MDBCardBody>
       </MDBCard>
-      <style>
-        {`
-      .px-5 {
-        background-color: #ffffff;
-        background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-      }`}
-      </style>
+      
     </div>
   )
 }

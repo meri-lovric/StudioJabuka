@@ -12,8 +12,6 @@ const Layout = ({ children }) => {
           width: 100vw;
           display: grid;
           grid-template-columns: 1fr;
-          background-color: #ffffff;
-          background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
         }
         ::-webkit-scrollbar {
           display: none;

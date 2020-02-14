@@ -36,8 +36,6 @@ const CommercialsPage = () => {
       <style jsx>{`
         .grid-wrap {
           padding: 4em 10em;
-          background-color: #ffffff;
-          background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
         }
         p {
           font-size: 1.2em;

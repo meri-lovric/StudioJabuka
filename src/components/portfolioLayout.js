@@ -3,8 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { MDBMask, MDBView } from "mdbreact"
-import SimpleReactLightbox from "simple-react-lightbox"
-import PortfolioGrid from "./portfoliogrid"
+
 const PortfolioLayout = () => {
   const query = useStaticQuery(graphql`
     {
@@ -42,7 +41,6 @@ const PortfolioLayout = () => {
   `)
   return (
     <React.Fragment>
-      <SimpleReactLightbox>
         <div
           id="portfolio-grid"
           class="container-fluid"
@@ -70,10 +68,6 @@ const PortfolioLayout = () => {
                 key={node.id}
               >
                 <MDBView className="rounded z-depth-2 mb-lg-0 mb-4">
-                  <PortfolioGrid
-                    key={node.id}
-                    fluid={node.data.slika.localFiles[0].childImageSharp.fluid}
-                  >
                     <Img
                       style={{
                         objectFit: "cover",
@@ -91,13 +85,12 @@ const PortfolioLayout = () => {
                     <a href="#!">
                       <MDBMask overlay="white-slight" />
                     </a>
-                  </PortfolioGrid>
                 </MDBView>
               </div>
             ))}
           </div>
         </div>
-      </SimpleReactLightbox>
+
       <style jsx>{`
         #portfolio-grid .view .gatsby-image-wrapper {
           position: initial !important;

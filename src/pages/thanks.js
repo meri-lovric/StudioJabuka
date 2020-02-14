@@ -37,8 +37,7 @@ const ThanksPage = () => {
           margin: 4.8em 0;
         }
         .grid-wrap {
-          background-color: #ffffff;
-          background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+          
         }
       `}</style>
     </Layout>
