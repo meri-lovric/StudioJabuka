@@ -5,6 +5,7 @@ author: "Alex Chî"
 tags: "Dron"
 image: './images/Sample1.jpg'
 path: '../blog-4/'
+featuredIcon: '../../images/Icons/weddings.png'
 ---
     **Studio Jabuka** je fotografski studio iz Splita.
     Naša ekipa nudi vam sve fotografske usluge, od _fotografiranja vjenčanja_ i raznih drugih

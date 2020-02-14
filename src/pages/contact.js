@@ -69,7 +69,7 @@ const ContactPage = () => {
                   <a
                     href="https://goo.gl/maps/dk4ZoQ1iMyVkspfg9"
                   >
-                    <MDBBtn color="success" tag="a">
+                    <MDBBtn tag="a" color="success">
                       <MDBIcon
                         icon="map-marker-alt"
                         style={{ color: "white" }}

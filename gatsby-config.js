@@ -73,6 +73,7 @@ module.exports = {
             tags: node => node.frontmatter.tags,
             path: node => node.frontmatter.path,
             html: node => node.internal.content,
+            icon: node => node.frontmatter.icon,
           },
         },
       },

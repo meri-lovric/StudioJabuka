@@ -15,6 +15,25 @@ export const  query = graphql`query HomePageQuery{
             title
             date
             author
+            featuredIcon {
+              childImageSharp {
+                fluid {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                  originalImg
+                  originalName
+                  presentationWidth
+                  presentationHeight
+                }
+              }
+            }
+          
           }
           excerpt
           timeToRead

@@ -2,6 +2,7 @@ import React from "react"
 import { graphql,  useStaticQuery } from "gatsby"
 import Search from "./textSearch"
 import "bootstrap/dist/css/bootstrap.min.css"
+import { GiLinkedRings } from "react-icons/gi";
 
 import {
   MDBRow,
@@ -32,6 +33,24 @@ const BlogPage = () => {
               date
               author
               tags
+              featuredIcon {
+                childImageSharp {
+                  fluid(maxHeight: 10, maxWidth: 10) {
+                    base64
+                    tracedSVG
+                    aspectRatio
+                    src
+                    srcSet
+                    srcWebp
+                    srcSetWebp
+                    sizes
+                    originalImg
+                    originalName
+                    presentationWidth
+                    presentationHeight
+                  }
+                }
+              }
               image {
                 childImageSharp {
                   fluid(
@@ -103,8 +122,8 @@ const BlogPage = () => {
               <MDBCol lg="7">
                 <a href="#!" className="green-text">
                   <h6 className="font-weight-bold mb-3">
-                    <MDBIcon icon="utensils" className="pr-2" />
-                    {node.frontmatter.tag}
+
+                    {node.frontmatter.tags}
                   </h6>
                 </a>
                 <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
