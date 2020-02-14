@@ -94,11 +94,11 @@ const Welcome = () => {
           align-items:center;
           height: 100vh
       }
-        @media screen and (max-width: 950px) {
+        @media screen and (max-width: 1000px) {
           #section2{
             display:flex;
           align-items:center;
-          height: 150vh
+          height: 200vh
           }
           `}</style>
     </ReactWOW>

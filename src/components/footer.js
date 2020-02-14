@@ -102,7 +102,10 @@ export const Footer = () => {
         ))}
       </div>
       <style jsx>{`
+                @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
       #footer{
+
         padding: 20px 0;
         width: 100vw;
         display: flex;
@@ -113,6 +116,11 @@ export const Footer = () => {
         margin-bottom: 0px;
         background-color: #201f1d;
         color: white
+
+      }
+      .SocialMedia p{
+        font-family: 'Prompt', sans-serif;
+
       }
       .Icons{
         display:flex;
