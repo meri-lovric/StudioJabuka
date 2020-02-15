@@ -56,6 +56,12 @@ function AuthStatusView() {
       .loginButton {
         border-radius:40px;
         font-weight:500;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);  
+
+      }
+      #header-nav > div > div:nth-child(2) > li:nth-child(2) > div > div > a{
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);  
+
       }
       #tabs--1--panel--0 > form > button {
         display:none;

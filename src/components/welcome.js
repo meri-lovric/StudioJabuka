@@ -7,10 +7,16 @@ import Img from "gatsby-image"
 const Welcome = () => {
   const data = useStaticQuery(graphql`
     {
-      file(absolutePath: {regex: "//images/Predlozak//"}) {
+      file(absolutePath: { regex: "//images/Predlozak//" }) {
         id
         childImageSharp {
-          fluid(quality: 100, traceSVG: {turdSize: 10}, webpQuality: 100, maxHeight: 320, maxWidth: 400) {
+          fluid(
+            quality: 100
+            traceSVG: { turdSize: 10 }
+            webpQuality: 100
+            maxHeight: 320
+            maxWidth: 400
+          ) {
             aspectRatio
             originalImg
             base64
@@ -29,14 +35,12 @@ const Welcome = () => {
   `)
   return (
     <ReactWOW animation="fadeInUp">
-      <section id="section2" className="py-5" style={{
-          
-        }}>
-        <div
-          className="container"
-          
-        >
-          <h2 className="h1-responsive font-weight-bold text-center mb-5" style = {{color: "#00c851"}}>
+      <section id="section2" className="py-5" style={{}}>
+        <div className="container">
+          <h2
+            className="h1-responsive font-weight-bold text-center mb-5"
+            style={{ color: "#00c851" }}
+          >
             Foto Studio
           </h2>
           <p className="lead grey-text text-center w-responsive mx-auto mb-5">
@@ -45,8 +49,17 @@ const Welcome = () => {
             prigoda, do obrade i retuširanja fotografija.
           </p>
           <div className="row">
-            <div className="col-lg-5 text-center text-lg-left view overlay rounded z-depth-1">
-              <Img className="img-fluid" fluid={data.file.childImageSharp.fluid} alt="Sample image"/>
+            <div className="col-lg-5 text-center text-lg-left view overlay rounded ">
+              <Img
+                className="img-fluid"
+                fluid={data.file.childImageSharp.fluid}
+                alt="Sample image"
+                style={{
+                  boxShadow:
+                    " 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+                  borderRadius: "0.1em",
+                }}
+              />
               <div className="mask rgba-white-slight"></div>
             </div>
 
@@ -65,8 +78,8 @@ const Welcome = () => {
                 <div className="col-xl-10 col-md-11 col-10">
                   <h5 className="font-weight-bold mb-3">Video</h5>
                   <p className="grey-text">
-                    Usluge snimanja i produkcije videa najviše
-                    kvalitete, snimanja vjenčanja i raznih drugih prigoda.
+                    Usluge snimanja i produkcije videa najviše kvalitete,
+                    snimanja vjenčanja i raznih drugih prigoda.
                   </p>
                 </div>
               </div>
@@ -86,6 +99,10 @@ const Welcome = () => {
         </div>
       </section>
       <style jsx>{`
+      #section2 > div > div > div.col-lg-5.text-center.text-lg-left.view.overlay.rounded.z-depth-1{
+        padding-left:0px;
+        padding-right:0px;
+      }
       .row{
         margin:20px;
       }
@@ -100,6 +117,7 @@ const Welcome = () => {
           align-items:center;
           height: 200vh
           }
+     
           `}</style>
     </ReactWOW>
   )

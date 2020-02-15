@@ -51,14 +51,17 @@ const Navigation = () => {
           @media screen and (max-width: 500px){
             .menu-item{
                 font-size: 0.8em;
-                width:45%;
+                width:65%;
+            }
+            #section4{
+              flex-direction:column;
             }
             
         } 
         @media screen and (max-width: 1200px){
               .menu-item{
-                font-size: 1em;
-                width:35%;
+                font-size: 0.8em;
+                width:55%;
               }
             }
             .menu-item {

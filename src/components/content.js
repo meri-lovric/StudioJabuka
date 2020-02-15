@@ -45,76 +45,63 @@ export const Content = ({ data }) => {
     <React.Fragment>
       {" "}
       <nav
-              className="navbar navbar-expand-md navbar-light md-light"
-              style={{ padding: "0px" }}
-            >
-              <ul
-                id="section-buttons"
-                className="navbar-nav"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  width: "auto",
-                  backdropFilter: "blur(5px) contrast(.8)",
-                  height: "100%",
-                  zIndex: "15"
-                }}
-              >
-                <a
-                  href="#section1"
-                  className="nav-link"
-                  style={{
-                    color: "#a8dd53",
-                    fontFamily: "EnriquetaMedium",
-                  }}
-                >
-                  <li className="icon" id="uno">
-                  <i className="fas fa-circle"></i>
-                  </li>
-                </a>
-                <a
-                  href="#section2"
-                  className="nav-link"
-                  style={{
-                    color: "#a8dd53",
-                    fontFamily: "EnriquetaMedium",
-                  }}
-                >
-                  <li className="icon" id="due">
-                  <i className="fas fa-circle"></i>
-                  </li>
-                </a>
-                <a
-                  href="#section3"
-                  className="nav-link"
-                  style={{
-                    color: "#a8dd53",
-                    fontFamily: "EnriquetaMedium",
-                  }}
-                >
-                  <li className="icon" id="tre">
-                  <i className="fas fa-circle"></i>
-                  </li>
-                </a><a
-                  href="#section4"
-                  className="nav-link"
-                  style={{
-                    color: "#a8dd53",
-                    fontFamily: "EnriquetaMedium",
-                  }}
-                >
-                  <li className="icon" id="quattro">
-                  <i className="fas fa-circle"></i>
-                  </li>
-                </a>
-              </ul>
-            </nav>
-
+        className="navbar navbar-expand-md navbar-light md-light"
+        style={{ padding: "0px" }}
+      >
+        <ul id="section-buttons" className="navbar-nav">
+          <a
+            href="#section1"
+            className="nav-link"
+            style={{
+              color: "#a8dd53",
+              fontFamily: "EnriquetaMedium",
+            }}
+          >
+            <li className="icon" id="uno">
+              <i className="fas fa-circle"></i>
+            </li>
+          </a>
+          <a
+            href="#section2"
+            className="nav-link"
+            style={{
+              color: "#a8dd53",
+              fontFamily: "EnriquetaMedium",
+            }}
+          >
+            <li className="icon" id="due">
+              <i className="fas fa-circle"></i>
+            </li>
+          </a>
+          <a
+            href="#section3"
+            className="nav-link"
+            style={{
+              color: "#a8dd53",
+              fontFamily: "EnriquetaMedium",
+            }}
+          >
+            <li className="icon" id="tre">
+              <i className="fas fa-circle"></i>
+            </li>
+          </a>
+          <a
+            href="#section4"
+            className="nav-link"
+            style={{
+              color: "#a8dd53",
+              fontFamily: "EnriquetaMedium",
+            }}
+          >
+            <li className="icon" id="quattro">
+              <i className="fas fa-circle"></i>
+            </li>
+          </a>
+        </ul>
+      </nav>
       <Carousel>
         {query.allFile.edges.map(({ node }) => (
           <Carousel.Item key={node.id}>
-           
             <Img
               style={{ height: "100vh" }}
               key={node.originalName}
@@ -133,6 +120,7 @@ export const Content = ({ data }) => {
                   minHeight: "10vh",
                   fontSize: "75px",
                   border: "solid 1px white",
+                  fontFamily: "Roboto"
                 }}
               >
                 {MagicWriter("Studio Jabuka")}
@@ -143,12 +131,16 @@ export const Content = ({ data }) => {
       </Carousel>
       <style jsx>
         {`
-        #gatsby-focus-wrapper > div > div > a.carousel-control-prev{
-          left:50px;
+        #layout > div > div > div > div.carousel-caption{
+          background-color: rgb(238, 238, 238,0.2);
+
         }
-        #layout > div {
-          z-index:1;
-        }
+          #gatsby-focus-wrapper > div > div > a.carousel-control-prev {
+            left: 50px;
+          }
+          #layout > div {
+            z-index: 1;
+          }
 
           .page {
             width: 100%;
@@ -224,8 +216,7 @@ export const Content = ({ data }) => {
           }
 
           .icon {
-            color: #fff;
-
+            color: rgb(0, 200, 81);
             display: block;
             font-family: EnriquetaMedium;
           }
@@ -259,14 +250,19 @@ export const Content = ({ data }) => {
             -o-transform: scale(1.2) !important;
           }
 
-          #section-buttons{
+          #section-buttons {
             display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  width: auto;
-                  backdrop-filter: blur(5px) contrast(.8);
-                  height: 100%;
-                  z-index: 15;
+            flex-direction: column;
+            justify-content: center;
+            width: auto;
+            height: 100%;
+            z-index: 15;
+            background-color: rgb(238, 238, 238,0.2);
+          }
+          @media screen and (max-width: 400px) {
+            #section-buttons {
+              display: none !important;
+            }
           }
 
           ul {
@@ -281,8 +277,8 @@ export const Content = ({ data }) => {
             padding: 0;
             text-align: center;
           }
-          #section-buttons li{
-            height:100%;
+          #section-buttons li {
+            height: 100%;
           }
           #section-buttons .icon {
             transition: all 0.5s ease-out !important;
@@ -290,8 +286,8 @@ export const Content = ({ data }) => {
             -moz-transition: all 0.5s ease-out;
             -o-transition: all 0.5s ease-out;
           }
-          #section-buttons a{
-            height:5%;
+          #section-buttons a {
+            height: 5%;
           }
           a {
             text-decoration: none;

@@ -10,6 +10,10 @@ import {
   MDBView,
 } from "mdbreact"
 export const Footer = () => {
+  let sliceLength = 5;
+  if(window.innerWidth < 500){
+    sliceLength=4;
+  }
   const query = useStaticQuery(graphql`
     {
       allFile(filter: { absolutePath: { regex: "//images/Instagram//" } }) {
@@ -88,12 +92,14 @@ export const Footer = () => {
           padding: "10px",
         }}
       >
-        {query.allFile.edges.map(({ node }) => (
+        {
+        query.allFile.edges.slice(0,sliceLength).map(({ node }) => (
           <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves key={node.id}>
             <Img
+              className="instagram-photo"
               fluid={node.childImageSharp.fluid}
               alt={"footer" + node.id}
-              style={{ height: "10vw", width: "10vw", margin: "10px" }}
+              style={{ height: "15vw", width: "15vw", margin: "10px" }}
             />
             <a href="#!">
               <MDBMask overlay="white-slight" />
@@ -106,7 +112,7 @@ export const Footer = () => {
       #footer{
 
         padding: 20px 0;
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -129,29 +135,30 @@ export const Footer = () => {
       .Icons a {
        display:flex;
        justify-content:center;
-       width: 45%;
+       width: 65%;
       }
       .Icons img{
-        width: 45%;
+        width: 65%;
 
       }
-        @media screen and (max-width: 1200px) {
+        @media screen and ( max-width: 1200px) {
           .Icons a {
-            width: 45%;
+            width: 50%;
           }
           .Icons img {
-            width: 45%;
+            width: 50%;
           }
           .SocialMedia p {
             font-size: 85%;
           }
           
         }
-        @media screen and (max-width: 950px) {
+        @media screen and ( max-width: 950px) {
           #footer{
             flex-direction:column-reverse;
 
           }
+        
         }
       `}</style>
     </footer>
