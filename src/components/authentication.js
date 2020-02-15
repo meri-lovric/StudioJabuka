@@ -4,7 +4,7 @@ import IdentityModal, {
   IdentityContextProvider,
 } from "react-netlify-identity-widget"
 import "../../node_modules/react-netlify-identity-widget/styles.css"
-import { MDBBtn} from "mdbreact"
+import {MDBIcon, MDBBtn} from "mdbreact"
 
 function Authentication() {
   const url = "https://studiojabuka.netlify.com/" // supply the url of your Netlify site instance. VERY IMPORTANT. no point putting in env var since this is public anyway
@@ -30,7 +30,7 @@ function AuthStatusView() {
     <div>
       <div>
       <MDBBtn className ="loginButton" role="button" color="success" tag="a" onClick={() => setDialog(true)}>
-          {isLoggedIn ? `Hello, `+name+` log out here!` : 'Log in'}</MDBBtn> {/*ubacit name*/}
+          {isLoggedIn ? `Hello ${name}, Log out here!` : 'Log in'}</MDBBtn>
       </div>
       <IdentityModal
         showDialog={dialog}
@@ -62,9 +62,6 @@ function AuthStatusView() {
       #header-nav > div > div:nth-child(2) > li:nth-child(2) > div > div > a{
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);  
 
-      }
-      #tabs--1--panel--0 > form > button {
-        display:none;
       }
       `}
       </style>

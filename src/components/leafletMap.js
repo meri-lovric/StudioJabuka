@@ -8,7 +8,8 @@ class LeafletMap extends React.Component {
       <div ref={this.mapWrapperRef} className="map-wrapper">
         {typeof window !== "undefined" ? (
           <Map center={this.props.position} zoom={this.props.zoom}>
-            <TileLayer style = {{width:"20px", height:"20px"}}
+            <TileLayer
+              
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />

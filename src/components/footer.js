@@ -124,7 +124,7 @@ export const Footer = () => {
 
       }
       .SocialMedia p{
-        font-family: 'Prompt', sans-serif;
+  
 
       }
       .Icons{

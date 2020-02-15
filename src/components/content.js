@@ -45,60 +45,69 @@ export const Content = ({ data }) => {
     <React.Fragment>
       {" "}
       <nav
-        className="navbar navbar-expand-md navbar-light md-light"
-        style={{ padding: "0px" }}
-      >
-        <ul id="section-buttons" className="navbar-nav">
-          <a
-            href="#section1"
-            className="nav-link"
-            style={{
-              color: "#a8dd53",
-              fontFamily: "EnriquetaMedium",
-            }}
-          >
-            <li className="icon" id="uno">
-              <i className="fas fa-circle"></i>
-            </li>
-          </a>
-          <a
-            href="#section2"
-            className="nav-link"
-            style={{
-              color: "#a8dd53",
-              fontFamily: "EnriquetaMedium",
-            }}
-          >
-            <li className="icon" id="due">
-              <i className="fas fa-circle"></i>
-            </li>
-          </a>
-          <a
-            href="#section3"
-            className="nav-link"
-            style={{
-              color: "#a8dd53",
-              fontFamily: "EnriquetaMedium",
-            }}
-          >
-            <li className="icon" id="tre">
-              <i className="fas fa-circle"></i>
-            </li>
-          </a>
-          <a
-            href="#section4"
-            className="nav-link"
-            style={{
-              color: "#a8dd53",
-              fontFamily: "EnriquetaMedium",
-            }}
-          >
-            <li className="icon" id="quattro">
-              <i className="fas fa-circle"></i>
-            </li>
-          </a>
-        </ul>
-      </nav>
+              className="navbar navbar-expand-md navbar-light md-light"
+              style={{ padding: "0px" }}
+            >
+              <ul
+                id="section-buttons"
+                className="navbar-nav"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  width: "auto",
+                  backdropFilter: "blur(5px) contrast(.8)",
+                  height: "100%",
+                  zIndex: "15"
+                }}
+              >
+                <a
+                  href="#section1"
+                  className="nav-link"
+                  style={{
+                    color: "#a8dd53",
+                  }}
+                >
+                  <li className="icon" id="uno">
+                  <i className="fas fa-circle"></i>
+                  </li>
+                </a>
+                <a
+                  href="#section2"
+                  className="nav-link"
+                  style={{
+                    color: "#a8dd53",
+                  }}
+                >
+                  <li className="icon" id="due">
+                  <i className="fas fa-circle"></i>
+                  </li>
+                </a>
+                <a
+                  href="#section3"
+                  className="nav-link"
+                  style={{
+                    color: "#a8dd53",
+                  }}
+                >
+                  <li className="icon" id="tre">
+                  <i className="fas fa-circle"></i>
+                  </li>
+                </a><a
+                  href="#section4"
+                  className="nav-link"
+                  style={{
+                    color: "#a8dd53",
+
+                  }}
+                >
+                  <li className="icon" id="quattro">
+                  <i className="fas fa-circle"></i>
+                  </li>
+                </a>
+              </ul>
+            </nav>
+
       <Carousel>
         {query.allFile.edges.map(({ node }) => (
           <Carousel.Item key={node.id}>
@@ -155,9 +164,6 @@ export const Content = ({ data }) => {
             overflow: hidden;
           }
 
-          * {
-            font-family: "open sans", "lato", "helvetica", sans-serif;
-          }
 
           .page {
             position: absolute;
@@ -218,7 +224,6 @@ export const Content = ({ data }) => {
           .icon {
             color: rgb(0, 200, 81);
             display: block;
-            font-family: EnriquetaMedium;
           }
 
           ul .icon:hover {

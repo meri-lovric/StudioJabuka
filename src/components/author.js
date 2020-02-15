@@ -42,7 +42,7 @@ const BlogComponentsPage = ({children}) => {
             magnam.
           </MDBMedia>
         </MDBMedia>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"></link>
+        
         <Comments
                 siteId="0a8e758d-d437-4231-a271-ea43ee0b9c25"
                 threadSlug="komentari"

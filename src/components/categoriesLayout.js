@@ -84,7 +84,6 @@ const Categories = () => {
           box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44);
           overflow: hidden;
           color: white;
-          font-family: "Roboto";
         }
         .tile img {
           height: 100%;
