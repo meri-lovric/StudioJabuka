@@ -80,6 +80,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-airtable`,
       options: {
@@ -116,6 +117,7 @@ module.exports = {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
     },
+    
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

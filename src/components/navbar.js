@@ -106,7 +106,7 @@ class NavbarPage extends Component {
             </div>
           </MDBContainer>
         </MDBNavbar>
-        <style jsx>{`
+        <style>{`
           @media screen and (max-width: 900px) {
             .logo {
               width: 2em;

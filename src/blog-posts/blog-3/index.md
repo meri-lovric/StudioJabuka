@@ -1,10 +1,12 @@
 ---
-title: "Common Vue.js"
-date: "2017-12-05"
-author: "Alex Chî"
+title: "Zašto odabrati fotografiranje dronom?"
+date: "08-11-2019"
+author: "Studio Jabuka"
 tags: "Dron"
-image: './images/Sample1.jpg'
+image: './images/Sample3.jpg'
 path: '../blog-3/'
 featuredIcon: '../../images/Icons/weddings.png'
 ---
-Vue.js (commonly referred to as Vue; pronounced /vjuː/, like view) is an open-source progressive JavaScript framework for building user interfaces.[4] Integration into projects that use other JavaScript libraries is made easy with Vue because it is designed to be incrementally adoptable. Vue can also function as a web application framework capable of powering advanced single-page applications. - Wikipedia
+Fotografiranje i snimanje dronom iz zraka omogućuje nesvakidašnji pogled na događaje, prostore, plovila itd. Upravo će zbog toga ovakve fotografije i snimke lako privući i zadržati pažnju klijenata. Perspektiva koja inače nije lako dostupna uvest će važan element iznenađenja i omogućiti da vaša priča bude ispričana na pomalo filmski način koji nikoga neće ostaviti ravnodušnim.
+
+![WeddingPet](./images/Sample3.jpg)  

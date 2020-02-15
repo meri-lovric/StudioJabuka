@@ -138,7 +138,7 @@ export const Content = ({ data }) => {
           </Carousel.Item>
         ))}
       </Carousel>
-      <style jsx>
+      <style>
         {`
         #layout > div > div > div > div.carousel-caption{
           background-color: rgb(238, 238, 238,0.2);

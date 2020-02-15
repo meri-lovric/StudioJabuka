@@ -1,6 +1,5 @@
 import React from "react"
 import { Map, TileLayer, Marker } from "react-leaflet"
-import "../styles/leafletMap.css"
 
 class LeafletMap extends React.Component {
   render() {
@@ -9,7 +8,6 @@ class LeafletMap extends React.Component {
         {typeof window !== "undefined" ? (
           <Map center={this.props.position} zoom={this.props.zoom}>
             <TileLayer
-              
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
@@ -18,6 +16,13 @@ class LeafletMap extends React.Component {
             )}
           </Map>
         ) : null}
+        <style>{`
+        .leaflet-container{
+          height: 25em;
+          width:100%;
+          z-index: 0;
+      }
+        `}</style>
       </div>
     )
   }

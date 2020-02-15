@@ -1,18 +1,12 @@
 ---
-title: "Common Vue.js"
+title: "Lucija + Luka"
 date: "2017-12-05"
-author: "Alex Chî"
-tags: "Dron"
-image: './images/Sample1.jpg'
+author: "Studio Jabuka"
+tags: "Vječanja"
+image: './images/Sample4.jpg'
 path: '../blog-4/'
 featuredIcon: '../../images/Icons/weddings.png'
 ---
-    **Studio Jabuka** je fotografski studio iz Splita.
-    Naša ekipa nudi vam sve fotografske usluge, od _fotografiranja vjenčanja_ i raznih drugih
-    prigoda, _snimanja foto-sessiona_ na lokaciji i u studiju i _izrade
-    book-ova_ za modele, _obrade i retuširanja fotografija_ i pripreme za
-    tisak, izrade foto albuma svih vrsta, _izrade najkvalitetnijih tiskanih
-    book-albuma_...
-    Nudimo vam i usluge snimanja i produkcije videa najviše
-    kvalitete, snimanja vjenčanja i raznih drugih prigoda. Posjedujemo
-    najmoderniju opremu i sve radimo u **HD kvaliteti**.
+Taj divni splitski dan i divna splitska noć. Upravo tako najbolje ćemo opisati vjenčanje Lucije i Luke. Vila Dalmacija smještena u gradu pod Marjanom, mjesto koje su mladenci odabrali za svoje vjenčanje bila je savršena kulisa za fotografiranje njihovog dana iz snova.
+
+![WeddingPet](./images/Sample4.jpg)  

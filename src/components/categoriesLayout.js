@@ -61,7 +61,7 @@ const Categories = () => {
         </div>
       </Link>
 
-      <style jsx>{`
+      <style>{`
         body {
           background-color: #eee;
           background-color: #ffffff;

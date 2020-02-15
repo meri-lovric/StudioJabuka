@@ -81,7 +81,7 @@ export default class Contact extends React.Component {
         <button type="submit" className="btn btn-success">Send</button>
       </p>
     </form>
-    <style jsx>{`
+    <style>{`
         .fa {
           font-size: 1.5em;
           color: #212529;

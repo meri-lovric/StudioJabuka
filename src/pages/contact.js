@@ -66,10 +66,8 @@ const ContactPage = () => {
               <br />
               <MDBRow className="text-center">
                 <MDBCol md="4">
-                  <a
-                    href="https://goo.gl/maps/dk4ZoQ1iMyVkspfg9"
-                  >
-                    <MDBBtn tag="a" color="success">
+                  
+                    <MDBBtn tag="a" color="success" href="https://goo.gl/maps/dk4ZoQ1iMyVkspfg9">
                       <MDBIcon
                         icon="map-marker-alt"
                         style={{ color: "white" }}
@@ -77,24 +75,22 @@ const ContactPage = () => {
                     </MDBBtn>
                     <p>21251 Žrnovnica</p>
                     <p className="mb-md-0">Hrvatska</p>
-                  </a>
+                  
                 </MDBCol>
                 <MDBCol md="4">
-                  <a href="tel:+385915969080">
-                    <MDBBtn color="success" tag="a">
+                    <MDBBtn color="success" tag="a" href="tel:+385915969080">
                       <MDBIcon icon="phone" style={{ color: "white" }} />
                     </MDBBtn>
                     <p>+385 91 596 9080</p>
                     <p className="mb-md-0">Pon - Pet, 8:00-22:00</p>
-                  </a>
                 </MDBCol>
                 <MDBCol md="4">
-                  <a href="mailto:info@studiojabuka.com" >
-                    <MDBBtn color="success" tag="a">
+                  
+                    <MDBBtn color="success" tag="a" href="mailto:info@studiojabuka.com">
                       <MDBIcon icon="envelope" style={{ color: "white" }} />
                     </MDBBtn>
                     <p>info@studiojabuka.com</p>
-                  </a>
+                  
                 </MDBCol>
               </MDBRow>
             </MDBCol>

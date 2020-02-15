@@ -1,10 +1,13 @@
 ---
-title: "Basic Web Development"
-date: "2018-01-01"
-author: "Chris Ashî"
+title: "Naša bajka na Hvaru"
+date: "10-12-2019"
+author: "Studio Jabuka"
 tags: "Catering"
-image: './images/Sample1.jpg'
+image: './images/Sample2.jpg'
 path: '../blog-2/'
 featuredIcon: '../../images/Icons/weddings.png'
 ---
-Web development is a broad term for the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing the simplest static single page of plain text to the most complex web-based internet applications (or just 'web apps') electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development.
+U gradu Hvaru početkom svibnja otvoren je Štajun, restoran koji se u moru novootvorenih pretencioznih mjesta u kojima se konstantno inzistira na nekoj posebnoj, dosad neviđenoj ponudi, pomalo izdvaja jednostavnošću. Izgleda kao ugodna, jednostavna konoba kakvu si zamišljate na moru, otvorenu prije 20, 30 godina. 
+Ovim putem im se zahvaljujemo na ukazano povjerenje te se nadamo budućoj suradnji.
+
+![WeddingPet](./images/Sample2.jpg)  
