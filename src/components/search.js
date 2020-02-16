@@ -19,15 +19,14 @@ const Search = () => {
             <input
               className="form-control mr-sm-2"
               type="text"
-              placeholder="Search"
-              aria-label="Search"
+              aria-label="Pretraži"
             ></input>
           </div>
           <button
             className="btn btn-outline-white btn-md my-2 my-sm-0 ml-3"
             type="submit"
           >
-            Search
+            Pretraži
           </button>
         </form>
       </nav>

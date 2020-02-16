@@ -56,33 +56,44 @@ const Projects = () => {
     <section
       id="section3"
       className="text-center py-5"
-      style={{ backgroundColor: " #eee"}}
+      style={{ backgroundColor: " #eee" }}
     >
       <div className="container">
-        <h2 className="h1-responsive font-weight-bold mb-5" style = {{color: "#00c851"}}>Novosti</h2>
+        <h2
+          className="h1-responsive font-weight-bold mb-5"
+          style={{ color: "#00c851" }}
+        >
+          Novosti
+        </h2>
         <p className="grey-text w-responsive mx-auto mb-5">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit est laborum.
+          Naš blog donosi Vam pregled najnovijih vijesti i pogodnosti vezanih uz
+          studio te priče i dojmove klijenata. Kvaliteta usluga i proizvoda naš
+          je prioritet, a profesionalna
+          oprema, ljudstvo i vaše povjerenje naša potpora. <br/>
+          Hvala što nas pratite!
         </p>
 
         <div className="row text-center">
-          {data.allMarkdownRemark.edges.slice(0,3).map(({ node }) => (
+          {data.allMarkdownRemark.edges.slice(0, 3).map(({ node }) => (
             <div className="col-lg-4 col-md-12 mb-lg-0 mb-4" key={node.id}>
               <div className="view overlay rounded z-depth-1">
-              <Img
-              key={node.id}
-                      classNameName="img-fluid"
-                      fluid={node.frontmatter.image.childImageSharp.fluid}
-                    />
+                <Img
+                  key={node.id}
+                  classNameName="img-fluid"
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                />
                 <a href={node.fields.slug}>
                   <div className="mask rgba-white-slight"></div>
                 </a>
               </div>
               <div className="card-body pb-0">
-                <h4 className="font-weight-bold my-3">Sample</h4>
+                <h4 className="font-weight-bold my-3">
+                  {node.frontmatter.title}
+                </h4>
                 <p className="grey-text">{node.excerpt}</p>
-                <a className="btn btn-purple btn-sm" href={node.fields.slug}>View project</a>
+                <a className="btn btn-purple btn-sm" href={node.fields.slug}>
+                  Pročitaj
+                </a>
               </div>
             </div>
           ))}

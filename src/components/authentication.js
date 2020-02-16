@@ -9,8 +9,8 @@ import {MDBIcon, MDBBtn} from "mdbreact"
 function Authentication() {
   const url = "https://studiojabuka.netlify.com/" // supply the url of your Netlify site instance. VERY IMPORTANT. no point putting in env var since this is public anyway
   return (
-    <IdentityContextProvider url={url}>
-      <AuthStatusView />
+    <IdentityContextProvider url={url} aria-label="identityContextProvider">
+      <AuthStatusView aria-label="authStatusView"/>
     </IdentityContextProvider>
   )
 }
@@ -29,7 +29,7 @@ function AuthStatusView() {
   return (
     <div>
       <div>
-      <MDBBtn className ="loginButton" role="button" color="success" tag="a" onClick={() => setDialog(true)}>
+      <MDBBtn className ="loginButton" role="button" color="success" tag="a" aria-label="loginButton" onClick={() => setDialog(true)}>
           {isLoggedIn ? `Hello ${name}, Log out here!` : 'Log in'}</MDBBtn>
       </div>
       <IdentityModal
@@ -38,6 +38,7 @@ function AuthStatusView() {
         onLogin={user => console.log("hello ", user.user_metadata)}
         onSignup={user => console.log("welcome ", user.user_metadata)}
         onLogout={() => console.log("bye ", name)}
+        aria-label="identityModal"
       />
       <style>{`
       #header-nav > div > div:nth-child(2) > li:nth-child(2) > div > div > a {

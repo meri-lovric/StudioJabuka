@@ -24,7 +24,7 @@ const QuestionsAccordion = () => {
           <AccordionItemButton>Gdje se nalazite?</AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <p>Nalazimo se u Žrnovnici, naselju istočno/sjeveroistočno Splita.</p>
+          <p>Nalazimo se u novnici, naselju istočno/sjeveroistočno Splita.</p>
         </AccordionItemPanel>
       </AccordionItem>
       <AccordionItem>

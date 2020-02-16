@@ -62,23 +62,23 @@ export default class Contact extends React.Component {
       <p className = "text-center">
         <label>
           <MDBIcon icon="user-alt" style = {{marginRight: "10px"}} />
-          <input type="text" name="name"  onChange={this.handleChange} placeholder="Enter your name" className="form-control"/>
+          <input type="text" name="name"  onChange={this.handleChange} placeholder="Ime" className="form-control"/>
         </label>
       </p>
       <p className= "text-center">
         <label>
           <MDBIcon icon="envelope" style = {{marginRight: "10px"}}/>
-          <input type="email" name="email"  onChange={this.handleChange} placeholder="Enter email" className="form-control"/>
+          <input type="email" name="email"  onChange={this.handleChange} placeholder="Email adresa" className="form-control"/>
         </label>
       </p>
       <p className= "text-center">
         <label>
           <MDBIcon icon="comment-alt" style = {{marginRight: "10px"}}/>
-          <textarea name="message" onChange={this.handleChange} placeholder="Enter message" className="form-control md-textarea"/>
+          <textarea name="message" onChange={this.handleChange} placeholder="Poruka" className="form-control md-textarea"/>
         </label>
       </p>
       <p className= "text-center">
-        <button type="submit" className="btn btn-success">Send</button>
+        <button type="submit" className="btn btn-success">Pošalji</button>
       </p>
     </form>
     <style>{`

@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Search from "./textSearch"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { GiLinkedRings } from "react-icons/gi"
 
 import {
   MDBRow,
@@ -113,12 +112,11 @@ const BlogPage = () => {
       >
         <MDBCardBody>
           <Search></Search>
-          <p className="text-left w-responsive mx-auto mb-5">
+          <p className="text-center w-responsive mx-auto pb-5">
             Kvaliteta usluga i proizvoda naš je prioritet, znanje i entuzijazam
             naš pokretač, a profesionalna oprema, ljudstvo i vaše povjerenje
             naša potpora. Donosimo vam najnovije vijesti vezane uz studio,
-            pogodnosti, priče o klijentima te još mnogo toga.
-            <br />
+            pogodnosti, priče o klijentima... <br/>
             Hvala što nas pratite!
           </p>
 
@@ -190,8 +188,8 @@ const BlogPage = () => {
             .px-5 {
               background-color: #ffffff;
             }
-            .text-left {
-              font-size: 1.3em;
+            .text-center {
+              font-size: 1.2em;
             }
             .excerpt{
               font-size: 1.15em;

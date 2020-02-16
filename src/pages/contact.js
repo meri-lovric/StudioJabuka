@@ -41,13 +41,13 @@ const ContactPage = () => {
                     <div
                       className="h3 fadeIn"
                       style={{
-                        color: "#00c851",
+                        color: "#9e9e9e",
                         animationName: "fadeIn",
                         visibility: "visible",
                         paddingTop: "1em",
                       }}
                     >
-                      Write to us:
+                      Pošaljite nam upit
                     </div>
                   </div>
                   <div>
