@@ -1,15 +1,71 @@
 import React from "react"
 import "../styles/grid.scss"
-import Sample1 from "../images/Categories/26910197_1811510835580207_9147397433929883580_o.jpg"
-import Sample2 from "../images/Categories/2.jpg"
-import Sample3 from "../images/Categories/18238782_1559326514131975_3830999876402550223_o.jpg"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Categories = () => {
+  const data = useStaticQuery(graphql`
+  {
+    drone: file(name: {eq: "drone"}, absolutePath: {regex: "//images/Categories//"}) {
+      childImageSharp {
+        fluid {
+          base64
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+          presentationWidth
+          presentationHeight
+        }
+      }
+    }
+    catering: file(name: {eq: "catering"}, absolutePath: {regex: "//images/Categories//"}) {
+      childImageSharp {
+        fluid {
+          base64
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+          presentationWidth
+          presentationHeight
+        }
+      }
+    }
+    weddings: file(name: {eq: "weddings"}, absolutePath: {regex: "//images/Categories//"}) {
+      childImageSharp {
+        fluid {
+          base64
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+          presentationWidth
+          presentationHeight
+        }
+      }
+    }
+  }
+`)
   return (
     <section className="grid-wrap text-center">
       <Link to="/weddings" className="tile text-center">
-        <img src={Sample3} alt="" />
+        <img src={data.weddings.childImageSharp.fluid.src} alt="" />
         <div className="text">
           <h1>Vjenčanja</h1>
           <h2 className="animate-text">Foto & video</h2>
@@ -27,7 +83,7 @@ const Categories = () => {
       </Link>
 
       <Link to="/commercial" className="tile text-center">
-        <img src={Sample2} alt="" />
+        <img src={data.catering.childImageSharp.fluid.src} alt="" />
         <div className="text">
           <h1>Web, katalozi i promocija</h1>
           <h2 className="animate-text">Foto & video</h2>
@@ -44,7 +100,7 @@ const Categories = () => {
       </Link>
 
       <Link to="/drone" className="tile text-center">
-        <img src={Sample1} alt="" />
+        <img src={data.drone.childImageSharp.fluid.src} alt="" />
         <div className="text">
           <h1>Dron</h1>
           <h2 className="animate-text">Foto & video</h2>
@@ -62,18 +118,51 @@ const Categories = () => {
       </Link>
 
       <style>{`
+        @media screen and (max-width: 765px) {
+          .grid-wrap{
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            margin:5em 1em;
+            height:100vh;
+          }
+          .tile h2{
+            font-size:large;
+          }
+          .tile p{
+            font-size:x-small;
+          }
+          .tile{
+            width: 75%;
+            height: 75%;
+            margin: 10px;
+            background-color: white;
+            display: inline-block;
+            background-size: cover;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease-out;
+            box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44);
+            overflow: hidden;
+            color: white;
+          }
+        }
         body {
           background-color: #eee;
           background-color: #ffffff;
           background: url("../images/cubes.png");
         }
         .grid-wrap {
-          margin: 9em 10em;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          height:100vh;
           
         }
         .tile {
-          width: 23.75em;
-          height: 23.73em;
+          width: 40vh;
+          height: 40vh;
           margin: 10px;
           background-color: white;
           display: inline-block;
@@ -105,7 +194,19 @@ const Categories = () => {
           font-weight: 300;
           margin: 0;
           text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-          color: rgb(32, 31, 29);
+          //color: rgb(32, 31, 29);
+          font-size:larger;
+          color: rgba(0, 0, 0, 0.5);
+
+
+
+          background-color:#fff;
+    overflow:hidden;
+    display:inline-block; 
+    padding:10px; 
+    font-weight:bold;
+    font-family:arial;
+    color:transparent;
         }
         .tile h2 {
           font-weight: 100;

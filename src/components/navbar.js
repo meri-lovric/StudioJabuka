@@ -117,7 +117,7 @@ class NavbarPage extends Component {
               height: 1em;
             }
           }
-          @media screen and (max-width: 400px) {
+          @media screen and (max-width: 500px) {
             .logo {
               display: none;
             }

@@ -4,7 +4,7 @@ import IdentityModal, {
   IdentityContextProvider,
 } from "react-netlify-identity-widget"
 import "../../node_modules/react-netlify-identity-widget/styles.css"
-import {MDBIcon, MDBBtn} from "mdbreact"
+import { MDBBtn} from "mdbreact"
 
 function Authentication() {
   const url = "https://studiojabuka.netlify.com/" // supply the url of your Netlify site instance. VERY IMPORTANT. no point putting in env var since this is public anyway

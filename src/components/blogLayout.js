@@ -9,7 +9,6 @@ import {
   MDBCard,
   MDBCardBody,
   MDBMask,
-  MDBIcon,
   MDBView,
   MDBBtn,
 } from "mdbreact"

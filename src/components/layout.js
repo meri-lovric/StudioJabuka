@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
     <div id="layout" style={{ background: "url(" + backgroundPath + ")" }}>
       <Header style={{ position: "fixed" }}></Header>
       {children}
-      <Footer style={{ position: "relative", bottom: "0" }}></Footer>
+      <Footer style={{ position: "fixed", bottom: "0" }}></Footer>
       <style jsx>{`
         #layout {
           width: 100vw;
