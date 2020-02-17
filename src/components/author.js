@@ -1,8 +1,39 @@
 import React from "react";
 import { MDBContainer, MDBCardHeader, MDBIcon, MDBMedia } from "mdbreact";
 import Comments from "remark-ninja-react"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
 const BlogComponentsPage = ({children}) => {
+  const data = useStaticQuery(graphql`
+  {
+    file(name: {eq: "circle-cropped"}, absolutePath: {regex: "//images//"}) {
+      id
+      absolutePath
+      relativePath
+      relativeDirectory
+      url
+      dir
+      extension
+      dev
+      childImageSharp {
+        fluid(quality: 100, traceSVG: {turdSize: 10}, webpQuality: 100, maxHeight: 320, maxWidth: 400) {
+          aspectRatio
+          originalImg
+          base64
+          originalName
+          src
+          srcSet
+          srcSetWebp
+          srcWebp
+          presentationHeight
+          presentationWidth
+        }
+        id
+      }
+    }
+  }
+`)
   return (
       <MDBContainer>
         <MDBCardHeader className="border-0  font-weight-bold d-flex justify-content-between">
@@ -15,7 +46,7 @@ const BlogComponentsPage = ({children}) => {
         </MDBCardHeader>
         <MDBMedia className="p-4 bg-white">
           <MDBMedia >
-            <img className="card-img-100 rounded-circle d-flex z-depth-1 mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" alt="" />
+            <Img className="card-img-100 rounded-circle d-flex z-depth-1 mr-3" fluid={data.file.childImageSharp.fluid} alt="" />
           </MDBMedia>
           <MDBMedia body>
             <h5 className="font-weight-bold text-default mt-0">

@@ -2,6 +2,7 @@ import React from "react";
 import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
 import Helmet from "react-helmet";
 import Header from "../components/header"
+import { useStaticQuery, graphql } from "gatsby"
 
 export const  query = graphql`query HomePageQuery{
     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {

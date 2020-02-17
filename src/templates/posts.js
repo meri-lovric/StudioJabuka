@@ -1,6 +1,8 @@
 import React from "react"
 import Author from "../components/author"
 import Layout from "../components/layout"
+import { useStaticQuery, graphql } from "gatsby"
+
 export default ({ data }) => {
   const backgroundPath = data.file.childImageSharp.fluid.src
 
