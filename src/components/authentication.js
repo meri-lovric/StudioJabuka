@@ -30,7 +30,7 @@ function AuthStatusView() {
     <div>
       <div>
       <MDBBtn className ="loginButton" role="button" color="success" tag="a" aria-label="loginButton" onClick={() => setDialog(true)}>
-          {isLoggedIn ? `Hello ${name}, Log out here!` : 'Log in'}</MDBBtn>
+          {isLoggedIn ? `Hello ${name}, Log out here!` : 'Login'}</MDBBtn>
       </div>
       <IdentityModal
         showDialog={dialog}

@@ -65,7 +65,7 @@ const Projects = () => {
         >
           Novosti
         </h2>
-        <p className="grey-text w-responsive mx-auto mb-5">
+        <p className="lead grey-text w-responsive mx-auto mb-5">
           Naš blog donosi Vam pregled najnovijih vijesti i pogodnosti vezanih uz
           studio te priče i dojmove klijenata. Kvaliteta usluga i proizvoda naš
           je prioritet, a profesionalna

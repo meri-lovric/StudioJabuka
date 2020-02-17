@@ -112,7 +112,7 @@ const BlogPage = () => {
       >
         <MDBCardBody>
           <Search></Search>
-          <p className="text-center w-responsive mx-auto pb-5">
+          <p className="lead text-center w-responsive mx-auto pb-5">
             Kvaliteta usluga i proizvoda naš je prioritet, znanje i entuzijazam
             naš pokretač, a profesionalna oprema, ljudstvo i vaše povjerenje
             naša potpora. Donosimo vam najnovije vijesti vezane uz studio,
@@ -162,9 +162,8 @@ const BlogPage = () => {
                 <p className="excerpt">{node.excerpt}</p>
 
                 <div>
-                  by
-                  <div className="author">{node.frontmatter.author}</div>{" "}
-                  <div className="date">
+                  <div className="author grey-text">{node.frontmatter.author}</div>{" "}
+                  <div className="date grey-text">
                     {node.frontmatter.date} {node.timeToRead}min read
                   </div>
                 </div>
@@ -188,12 +187,7 @@ const BlogPage = () => {
             .px-5 {
               background-color: #ffffff;
             }
-            .text-center {
-              font-size: 1.2em;
-            }
-            .excerpt{
-              font-size: 1.15em;
-            }`}
+        `}
       </style>
     </div>
   )

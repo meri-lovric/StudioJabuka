@@ -15,7 +15,7 @@ const ContactPage = () => {
           >
             Kontaktirajte nas
           </h2>
-          <p className="text-lg-left w-responsive mx-auto pb-5">
+          <p className="lead text-lg-left w-responsive mx-auto">
             Kako bismo Vam poslali najbolju ponudu, navedite posebne želje, Vaš
             okvirni budžet, očekivanja. Bit će nam drago prilagoditi se, jer
             uvijek pridajemo pažnju detaljima i Vašim potrebama. <br />
@@ -28,9 +28,10 @@ const ContactPage = () => {
               {" "}
               info@studiojabuka.com
             </a>
-            . Odgovorit ćemo na Vaš upit u roku 24 sata (pon – pet). Obično smo
+            . Odgovorit ćemo na Vaš upit u roku 24 sata. Obično smo
             vikendima zauzeti ili putujemo radi posla.
-            <br />
+          </p>
+          <p className="lead text-center pb-5">
             Hvala što ste zainteresirani za naše usluge!
           </p>
           <MDBRow style={{ margin: "0 10em" }}>
@@ -98,9 +99,6 @@ const ContactPage = () => {
         </section>
       </div>
       <style jsx>{`
-        p {
-          font-size: 1.2em;
-        }
         .mail {
           color: #00c851;
         }

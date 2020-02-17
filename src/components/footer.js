@@ -93,7 +93,7 @@ export const Footer = () => {
         }}
       >
         {
-        query.allFile.edges.slice(0,sliceLength).map(({ node }) => (
+        query.allFile.edges.slice(1,sliceLength).map(({ node }) => (
           <a
             href="https://www.instagram.com/studiojabuka/?hl=hr"
             target="_blank"
