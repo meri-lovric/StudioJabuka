@@ -129,7 +129,6 @@ export const Content = ({ data }) => {
                   minHeight: "10vh",
                   fontSize: "75px",
                   border: "solid 1px white",
-                  fontFamily: "Roboto"
                 }}
               >
                 {MagicWriter("Studio Jabuka")}

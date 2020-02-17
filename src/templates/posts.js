@@ -17,14 +17,14 @@ export default ({ data }) => {
          <h2 className="h1-responsive font-weight-bold text-center my-5">
          {post.frontmatter.title}
           </h2>
-          <p className="text-center w-responsive mx-auto mb-5">
+          <p className="text-left w-responsive mx-auto mb-5">
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </p>
         </div>
       <Author > {post.frontmatter.author}</Author>
       <style jsx>{`
       #layout{
-        grid-gap:20vh;
+        grid-gap:10vh;
       }
       #layout > div.blog-text > h2 {
         color: #9e9e9e !important;

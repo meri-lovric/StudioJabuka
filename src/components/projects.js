@@ -90,7 +90,7 @@ const Projects = () => {
                 <h4 className="font-weight-bold my-3">
                   {node.frontmatter.title}
                 </h4>
-                <p className="grey-text">{node.excerpt}</p>
+                <p className="text-left grey-text">{node.excerpt}</p>
                 <a className="btn btn-purple btn-sm" href={node.fields.slug}>
                   Pročitaj
                 </a>

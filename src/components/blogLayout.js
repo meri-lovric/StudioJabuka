@@ -111,7 +111,7 @@ const BlogPage = () => {
       >
         <MDBCardBody>
           <Search></Search>
-          <p className="lead text-center w-responsive mx-auto pb-5">
+          <p className="lead text-left w-responsive mx-auto pb-5">
             Kvaliteta usluga i proizvoda naš je prioritet, znanje i entuzijazam
             naš pokretač, a profesionalna oprema, ljudstvo i vaše povjerenje
             naša potpora. Donosimo vam najnovije vijesti vezane uz studio,

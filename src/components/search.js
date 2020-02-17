@@ -14,24 +14,26 @@ const Search = () => {
             Portfolio
           </div>
         </ReactWOW>
-        <button
-          className="btn btn-outline-white btn-md my-2 my-sm-0 ml-3"
-          type="submit"
-        >
-          Vjenčanja
-        </button>
-        <button
-          className="btn btn-outline-white btn-md my-2 my-sm-0 ml-3"
-          type="submit"
-        >
-          Dron
-        </button>
-        <button
-          className="btn btn-outline-white btn-md my-2 my-sm-0 ml-3"
-          type="submit"
-        >
-          Catering
-        </button>
+        <div className="buttons-container" style={{display:"flex", flexDirection:"row", justifyContent:"flexEnd"}}>
+          <button
+            className="btn btn-outline-white btn-md my-2 my-sm-0 ml-3"
+            type="submit"
+          >
+            Vjenčanja
+          </button>
+          <button
+            className="btn btn-outline-white btn-md my-2 my-sm-0 ml-3"
+            type="submit"
+          >
+            Dron
+          </button>
+          <button
+            className="btn btn-outline-white btn-md my-2 my-sm-0 ml-3"
+            type="submit"
+          >
+            Catering
+          </button>
+        </div>
       </nav>
     </React.Fragment>
   )

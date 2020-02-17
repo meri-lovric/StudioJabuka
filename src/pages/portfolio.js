@@ -10,6 +10,7 @@ const PortfolioPage = () => (
       <Search ></Search>
       <Portfolio ></Portfolio>
     </div>
+    
   </Layout>
 )
 
