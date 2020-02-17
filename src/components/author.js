@@ -69,8 +69,7 @@ const BlogComponentsPage = ({children}) => {
                 <MDBIcon fab className="grey-text" size="lg" icon="instagram" />
               </li>
             </ul>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consectetur accusamus velit nostrum et
-            magnam.
+            Moderator Studio Jabuka tima
           </MDBMedia>
         </MDBMedia>
         

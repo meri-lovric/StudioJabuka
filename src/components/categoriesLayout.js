@@ -5,67 +5,76 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const Categories = () => {
   const data = useStaticQuery(graphql`
-  {
-    drone: file(name: {eq: "drone"}, absolutePath: {regex: "//images/Categories//"}) {
-      childImageSharp {
-        fluid {
-          base64
-          tracedSVG
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          sizes
-          originalImg
-          originalName
-          presentationWidth
-          presentationHeight
+    {
+      drone: file(
+        name: { eq: "drone" }
+        absolutePath: { regex: "//images/Categories//" }
+      ) {
+        childImageSharp {
+          fluid {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
+        }
+      }
+      catering: file(
+        name: { eq: "catering" }
+        absolutePath: { regex: "//images/Categories//" }
+      ) {
+        childImageSharp {
+          fluid {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
+        }
+      }
+      weddings: file(
+        name: { eq: "weddings" }
+        absolutePath: { regex: "//images/Categories//" }
+      ) {
+        childImageSharp {
+          fluid {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
         }
       }
     }
-    catering: file(name: {eq: "catering"}, absolutePath: {regex: "//images/Categories//"}) {
-      childImageSharp {
-        fluid {
-          base64
-          tracedSVG
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          sizes
-          originalImg
-          originalName
-          presentationWidth
-          presentationHeight
-        }
-      }
-    }
-    weddings: file(name: {eq: "weddings"}, absolutePath: {regex: "//images/Categories//"}) {
-      childImageSharp {
-        fluid {
-          base64
-          tracedSVG
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          sizes
-          originalImg
-          originalName
-          presentationWidth
-          presentationHeight
-        }
-      }
-    }
-  }
-`)
+  `)
   return (
     <section className="grid-wrap text-center">
       <Link to="/weddings" className="tile text-center">
-        <img src={data.weddings.childImageSharp.fluid.src} alt="" />
+        <img src={data.weddings.childImageSharp.fluid.src} alt={data.weddings.childImageSharp.fluid.originalName}/>
         <div className="text">
           <h1>Vjenčanja</h1>
           <h2 className="animate-text">Foto & video</h2>
@@ -83,7 +92,7 @@ const Categories = () => {
       </Link>
 
       <Link to="/commercial" className="tile text-center">
-        <img src={data.catering.childImageSharp.fluid.src} alt="" />
+        <img src={data.catering.childImageSharp.fluid.src} alt={data.catering.childImageSharp.fluid.originalName} />
         <div className="text">
           <h1>Web, katalozi i promocija</h1>
           <h2 className="animate-text">Foto & video</h2>
@@ -100,7 +109,7 @@ const Categories = () => {
       </Link>
 
       <Link to="/drone" className="tile text-center">
-        <img src={data.drone.childImageSharp.fluid.src} alt="" />
+        <img src={data.drone.childImageSharp.fluid.src} alt={data.drone.childImageSharp.fluid.originalName} />
         <div className="text">
           <h1>Dron</h1>
           <h2 className="animate-text">Foto & video</h2>
@@ -196,17 +205,6 @@ const Categories = () => {
           text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
           //color: rgb(32, 31, 29);
           font-size:larger;
-          color: rgba(0, 0, 0, 0.5);
-
-
-
-          background-color:#fff;
-    overflow:hidden;
-    display:inline-block; 
-    padding:10px; 
-    font-weight:bold;
-    font-family:arial;
-    color:transparent;
         }
         .tile h2 {
           font-weight: 100;

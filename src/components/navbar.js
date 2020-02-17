@@ -173,6 +173,9 @@ class NavbarPage extends Component {
             margin-top: 10px;
             border-bottom: 1px solid #9e9e9e;
           }
+          #header-nav > div > div > li> div > div > div > div > a:hover{
+            box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
+          }
           li {
             list-style-type: none;
           }
