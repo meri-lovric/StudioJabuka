@@ -30,6 +30,9 @@ const Header = () => (
         padding: 1.5rem !important;
         background-color: #00c851;
       }
+      #header-nav > div > div:nth-child(2) > li:nth-child(1) > div > a::after {
+        display:none;
+      }
     `}</style>
   </header>
 )
