@@ -10,7 +10,12 @@ const WeddingsPage = () => {
       <section className="grid-wrap">
         <h2
           className="h1-responsive font-weight-bold text-center my-5"
-          style={{ color: "#00c851" }}
+          style={{ color: "#00c851",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection:"column"
+        }}
         >
           Cjenik fotografiranja i snimanja
         </h2>
@@ -65,6 +70,10 @@ const WeddingsPage = () => {
           border-radius: 10px;
           font-size: 1.1em;
         }
+        @media screen and (max-width: 768px) {
+          .grid-wrap {
+            padding: 1em !important;
+          }
       `}</style>
     </Layout>
   )

@@ -6,7 +6,15 @@ import { Link } from "gatsby"
 const CommercialsPage = () => {
   return (
     <Layout>
-      <section className="grid-wrap">
+      <section
+        className="grid-wrap"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection:"column"
+        }}
+      >
         <h2
           className="h1-responsive font-weight-bold text-center my-5"
           style={{ color: "#00c851" }}
@@ -33,6 +41,7 @@ const CommercialsPage = () => {
           </Link>
         </div>
       </section>
+
       <style jsx>{`
         .grid-wrap {
           padding: 4em 10em;
@@ -45,6 +54,11 @@ const CommercialsPage = () => {
         .btn {
           border-radius: 10px;
           font-size: 1.1em;
+        }
+        @media screen and (max-width: 768px) {
+          .grid-wrap {
+            padding: 1em !important;
+          }
         }
       `}</style>
     </Layout>

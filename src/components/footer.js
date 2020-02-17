@@ -10,10 +10,6 @@ import {
   MDBView,
 } from "mdbreact"
 export const Footer = () => {
-  let sliceLength = 5;
-  if(window.innerWidth < 500){
-    sliceLength=4;
-  }
   const query = useStaticQuery(graphql`
     {
       allFile(filter: { absolutePath: { regex: "//images/Instagram//" } }) {
@@ -93,7 +89,7 @@ export const Footer = () => {
         }}
       >
         {
-        query.allFile.edges.slice(1,sliceLength).map(({ node }) => (
+        query.allFile.edges.slice(1,5).map(({ node }) => (
           <a
             href="https://www.instagram.com/studiojabuka/?hl=hr"
             target="_blank"

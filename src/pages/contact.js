@@ -34,7 +34,7 @@ const ContactPage = () => {
           <p className="lead text-center pb-5">
             Hvala što ste zainteresirani za naše usluge!
           </p>
-          <MDBRow style={{ margin: "0 10em" }}>
+          <MDBRow style={{ display:"flex", justifyContent:"center", alignItems:"center" }}>
             <MDBCol lg="5" className="xl-0 mb-4">
               <MDBCard>
                 <MDBCardBody>
@@ -57,7 +57,7 @@ const ContactPage = () => {
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
-            <MDBCol lg="7">
+            <MDBCol lg="7" className="container-right">
               <div id="map-container" className="z-depth-1 map-container">
                 <LeafletMap
                   position={[43.5313269, 16.5261697]}
@@ -112,6 +112,12 @@ const ContactPage = () => {
           padding-top:1em;
           background-color: #ffffff;
           background: url("../images/cubes.png");
+        }
+        .xl-0 {
+          max-width: 550px;
+        }
+        .container-right{
+          max-width: 550px;
         }
       `}</style>
     </Layout>
