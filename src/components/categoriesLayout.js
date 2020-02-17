@@ -79,9 +79,8 @@ const Categories = () => {
           <h1>Vjenčanja</h1>
           <h2 className="animate-text">Foto & video</h2>
           <p className="animate-text">
-            U želji da maksimalno udovoljimo i najzahtjevnijim mladencima
-            formirali smo nekoliko atraktivnih snimateljskih aranžmana kojima
-            ćemo oživiti vašu svadbenu svečanost.{" "}
+            U želji da udovoljimo i najzahtjevnijim mladencima
+            formirali smo nekoliko atraktivnih snimateljskih aranžmana.{" "}
           </p>
           <div className="dots">
             <span></span>
@@ -114,8 +113,7 @@ const Categories = () => {
           <h1>Dron</h1>
           <h2 className="animate-text">Foto & video</h2>
           <p className="animate-text">
-            Ako želite prezentirati hotel, kuću, vilu, kamp ili restoran uz
-            more, fotografije i video snimke iz zraka daju potpuno novu i
+            Fotografije i video snimke iz zraka daju potpuno novu i
             atraktivnu perspektivu vašim objektima i lokacijama.{" "}
           </p>
           <div className="dots">

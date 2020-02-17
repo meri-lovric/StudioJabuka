@@ -11,7 +11,7 @@ const ContactPage = () => {
         <section className="container-fluid my-5">
           <h2
             className="h1-responsive font-weight-bold text-center my-5"
-            style={{ color: "#00c851" }}
+            style={{ color: "#00c851", paddingTop:"1em" }}
           >
             Kontaktirajte nas
           </h2>

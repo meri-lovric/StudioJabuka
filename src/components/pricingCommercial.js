@@ -3,7 +3,7 @@ import { PricingTable, PricingSlot, PricingDetail } from "react-pricing-table"
 
 const Pricing = () => {
   return (
-    <PricingTable highlightColor="#00c851">
+    <PricingTable highlightColor="#8e24aa !important">
       <PricingSlot title="Zahvalnice" priceText="9 kn/komad">
         <PricingDetail> Fotografije format 10×15 </PricingDetail>
         <PricingDetail> > 80 zahvalnica 5kn/komad </PricingDetail>
@@ -37,7 +37,7 @@ const Pricing = () => {
           background-color: white;
         }
         #highlighted-header {
-          background-color: #00c851;
+          background-color: #8e24aa !important;
         }
       `}</style>
     </PricingTable>

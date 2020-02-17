@@ -14,7 +14,7 @@ const CommercialsPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            flexDirection:"column"
+            flexDirection: "column",
           }}
         >
           Cjenik snimanja iz zraka dronom
@@ -33,6 +33,9 @@ const CommercialsPage = () => {
           javite nam se:
         </p>
         <div className="text-center">
+          <Link to="/categories" className="btn-success btn">
+            Povratak na kategorije
+          </Link>
           <Link to="/contact" className="btn-success btn">
             Kontakt
           </Link>
@@ -47,8 +50,7 @@ const CommercialsPage = () => {
         p {
           font-size: 1.2em;
         }
-        .btn {
-          border-radius: 10px;
+        #layout > section > div.text-center > a {
           font-size: 1.1em;
         }
         @media screen and (max-width: 768px) {

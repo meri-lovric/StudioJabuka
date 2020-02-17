@@ -8,11 +8,6 @@ const Header = () => (
   <header>
     <NavBar></NavBar>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    ></link>
-
     <style jsx>{`
       #nav-icon1 > span:nth-child(3) {
         top: 30px !important;

@@ -4,7 +4,7 @@ import { PricingTable, PricingSlot, PricingDetail } from "react-pricing-table"
 
 const Pricing = () => {
   return (
-    <PricingTable highlightColor="#00c851">
+    <PricingTable highlightColor="#8e24aa !important">
       <PricingSlot highlighted title="4:3 M" priceText="690 kn">
         <PricingDetail> Format 28×21</PricingDetail>
         <PricingDetail> Tvrdi uvez </PricingDetail>
@@ -43,7 +43,9 @@ const Pricing = () => {
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
           background-color:white;
         }
-
+        #highlighted-header {
+          background-color: #8e24aa !important;
+        }
       `}</style>
     </PricingTable>
   )

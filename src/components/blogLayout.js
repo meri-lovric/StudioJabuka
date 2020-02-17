@@ -166,7 +166,7 @@ const BlogPage = () => {
                     {node.frontmatter.date} {node.timeToRead}min read
                   </div>
                 </div>
-                <MDBBtn color="success" size="md" className="waves-light ">
+                <MDBBtn color="purple" size="md" className="waves-light ">
                   <Link
                     to={node.fields.slug}
                     style={{ textDecoration: "none", color: "inherit" }}
@@ -185,6 +185,9 @@ const BlogPage = () => {
         {`
             .px-5 {
               background-color: #ffffff;
+            }
+            #layout > div > div > div > div:nth-child(4) > div.col-lg-7 > button {
+              background-color: 
             }
         `}
       </style>
