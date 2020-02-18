@@ -9,7 +9,6 @@ export const Content = ({ data }) => {
     const typing = useTypewriter(word)
     return typing
   }
-  console.log("Data from page Predavanja:", data)
 
   const query = useStaticQuery(graphql`
     {

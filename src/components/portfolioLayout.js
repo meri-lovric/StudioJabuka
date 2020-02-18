@@ -8,7 +8,7 @@ const PortfolioLayout = () => {
 
   const query = useStaticQuery(graphql`
     {
-      allAirtable {
+     allAirtable {
         edges {
           node {
             data {
