@@ -80,7 +80,7 @@ const PortfolioDroneLayout = () => {
                   alt={node.data.Tip}
                   class="img-fluid z-depth-1-half mask"
                 />
-                <a href="#!">
+                    <a href={node.data.slika.localFiles[0].childImageSharp.fluid.src}>
                   <MDBMask overlay="white-slight" />
                 </a>
               </MDBView>

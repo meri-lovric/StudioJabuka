@@ -58,7 +58,7 @@ export const Footer = () => {
           justifyContent:"center"
         }}
       >
-        <p>Find us here</p>
+        <p>Pronađite nas ovdje</p>
         <div
           className="Icons"
           style={{
