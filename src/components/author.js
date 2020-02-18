@@ -74,7 +74,7 @@ const BlogComponentsPage = ({children}) => {
         </MDBMedia>
         
         <Comments
-                siteId="0a8e758d-d437-4231-a271-ea43ee0b9c25"
+                siteId="ec84fb6c-6c9d-4e38-a318-868afd6c97e9"
                 threadSlug="komentari"
                 />
       <style>
